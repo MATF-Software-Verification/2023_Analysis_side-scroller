@@ -1,0 +1,3 @@
+[submodule "28-side-scroller"]
+	path = 28-side-scroller
+	url = https://gitlab.com/matf-bg-ac-rs/course-rs/projects-2020-2021/28-side-scroller.git
