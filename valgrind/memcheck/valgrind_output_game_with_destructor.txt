@@ -20,6 +20,7 @@
 ==9005==    by 0x97EAB82: ??? (in /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.11)
 ==9005==    by 0x97EC04D: ??? (in /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.11)
 ==9005==    by 0x97EFDBF: XML_ParseBuffer (in /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.11)
+
 ==9005==    by 0x9212F42: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
 ==9005==    by 0x921337B: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
 ==9005== 
