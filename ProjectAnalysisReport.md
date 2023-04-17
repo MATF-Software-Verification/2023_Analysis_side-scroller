@@ -130,3 +130,142 @@ Button::~Button()
     
 
 - **Zaključak**: Pri izradi programa, nije bilo velike brige u oslobađanju memorije, ali nakon dodavanja par destruktora, imali smo veliki pad u curenju memorije!  
+
+## Valgrind - Massif
+
+- *Massif* je alat *Valgrind-a* koji daje informacije o preseku stanja hipa, u toku izvršavanja programa. Pokrenut je korišćenjem komande:
+    ```
+    valgrind --tool=massif ../../28-side-scroller/build/side-scroller
+    ```
+
+- Time dobijamo fajl *massif.out.14753*, samo što čitanje ovog fajla nije lako čitljivo čoveku, zato koristimo dodatnu komandu, da bi napravio nama čitljiviji fajl:
+
+    ```
+    ms_print massif.out.14753 > massif_graph.txt
+    ```
+
+- Tj. preusmeravamo izlaz u novi fajl, *massif_graph.txt*! Graf koji je dobijem datom komandom:
+```
+--------------------------------------------------------------------------------
+Command:            ../../28-side-scroller/build/side-scroller
+Massif arguments:   (none)
+ms_print arguments: massif.out.14753
+--------------------------------------------------------------------------------
+
+
+    MB
+224.2^                                                                      : 
+     |     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@::::@:@#@
+     |     @                                                         ::::@:@#@
+     |     @                                                         ::::@:@#@
+     |     @                                                         ::::@:@#@
+     |     @                                                         ::::@:@#@
+     |     @                                                         ::::@:@#@
+     |     @                                                         ::::@:@#@
+     |     @                                                         ::::@:@#@
+     |     @                                                         ::::@:@#@
+     |     @                                                         ::::@:@#@
+     |     @                                                         ::::@:@#@
+     |     @                                                         ::::@:@#@
+     |     @                                                         ::::@:@#@
+     |     @                                                         ::::@:@#@
+     |     @                                                         ::::@:@#@
+     |     @                                                         ::::@:@#@
+     |     @                                                         ::::@:@#@
+     |     @                                                         ::::@:@#@
+     |     @                                                         ::::@:@#@
+   0 +----------------------------------------------------------------------->Gi
+     0                                                                   3.349
+
+Number of snapshots: 89
+ Detailed snapshots: [2, 5, 11, 13, 15, 16, 36, 47, 53, 55 (peak), 65, 75, 85]
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  0              0                0                0             0            0
+  1      8,742,004               40               32             8            0
+  2     19,195,457          429,512          392,111        37,401            0
+  3     27,344,819          632,392          565,696        66,696            0
+  4     36,275,266          708,256          602,445       105,811            0
+  5     47,333,858          847,784          707,593       140,191            0
+  6     56,041,105          787,696          637,893       149,803            0
+  7     63,585,081          850,928          696,274       154,654            0
+```
+
+- Iz izveštaja možemo da vidimo da je massif napravio 89 preseka, i izvojio nam je neke od njih. Vrhunac je dostignut u 55, kada je potrošnja hipa bila oko 224.2MB, ali, treba napomenuti da kada se popne do te potrošnje, retko pada. Predpostavka je da program troši toliko veliku količinu hipa, pošto cela mapa je sastavljena od objekata različitih vrsta, pri čemu je svaki objekat predstavljen slikom. Samim tim, mnogo će više hipa trošiti, nego standardni program.
+
+- Ponovo je vršena ista analiza programa, samo što sada pratimo i potrošnju steka. Pozivamo istu komandu, samo što dodajemo opciju *--stack=yes*:
+
+    ```
+    valgrind --tool=massif --stack=yes ../../28-side-scroller/build/side-scroller
+
+    ms_print massif.out.15379 > massif_graph_2.txt
+    ```
+
+- Rezultat koji dobijamo: 
+
+```
+--------------------------------------------------------------------------------
+Command:            ../../28-side-scroller/build/side-scroller
+Massif arguments:   --stacks=yes
+ms_print arguments: massif.out.15379
+--------------------------------------------------------------------------------
+
+
+    MB
+224.1^                                                                      # 
+     |    @@:@::::::::@::::::::::::::::::::::@:::::::::::::@@:::::::::@:::@:#:
+     |    @ :@:: :: ::@:: :::::: ::: ::::: ::@: :::: ::::: @ ::: :::::@:::@:#:
+     |    @ :@:: :: ::@:: :::::: ::: ::::: ::@: :::: ::::: @ ::: :::::@:::@:#:
+     |    @ :@:: :: ::@:: :::::: ::: ::::: ::@: :::: ::::: @ ::: :::::@:::@:#:
+     |    @ :@:: :: ::@:: :::::: ::: ::::: ::@: :::: ::::: @ ::: :::::@:::@:#:
+     |    @ :@:: :: ::@:: :::::: ::: ::::: ::@: :::: ::::: @ ::: :::::@:::@:#:
+     |    @ :@:: :: ::@:: :::::: ::: ::::: ::@: :::: ::::: @ ::: :::::@:::@:#:
+     |    @ :@:: :: ::@:: :::::: ::: ::::: ::@: :::: ::::: @ ::: :::::@:::@:#:
+     |    @ :@:: :: ::@:: :::::: ::: ::::: ::@: :::: ::::: @ ::: :::::@:::@:#:
+     |    @ :@:: :: ::@:: :::::: ::: ::::: ::@: :::: ::::: @ ::: :::::@:::@:#:
+     |    @ :@:: :: ::@:: :::::: ::: ::::: ::@: :::: ::::: @ ::: :::::@:::@:#:
+     |    @ :@:: :: ::@:: :::::: ::: ::::: ::@: :::: ::::: @ ::: :::::@:::@:#:
+     |    @ :@:: :: ::@:: :::::: ::: ::::: ::@: :::: ::::: @ ::: :::::@:::@:#:
+     |    @ :@:: :: ::@:: :::::: ::: ::::: ::@: :::: ::::: @ ::: :::::@:::@:#:
+     |    @ :@:: :: ::@:: :::::: ::: ::::: ::@: :::: ::::: @ ::: :::::@:::@:#:
+     |    @ :@:: :: ::@:: :::::: ::: ::::: ::@: :::: ::::: @ ::: :::::@:::@:#:
+     |    @ :@:: :: ::@:: :::::: ::: ::::: ::@: :::: ::::: @ ::: :::::@:::@:#:
+     |    @ :@:: :: ::@:: :::::: ::: ::::: ::@: :::: ::::: @ ::: :::::@:::@:#:
+     |    @ :@:: :: ::@:: :::::: ::: ::::: ::@: :::: ::::: @ ::: :::::@:::@:#:
+   0 +----------------------------------------------------------------------->Gi
+     0                                                                   3.333
+
+Number of snapshots: 63
+ Detailed snapshots: [4, 6, 13, 32, 43, 52, 58, 60 (peak)]
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  0              0                0                0             0            0
+  1     60,187,272          805,328          648,617       153,703        3,008
+  2    110,938,008        3,577,280        3,401,312       172,368        3,600
+  3    183,288,691        3,603,488        3,425,264       172,920        5,304
+  4    229,698,589      230,323,976      230,144,950       175,394        3,632
+  5    313,548,282      230,497,104      230,318,040       175,472        3,592
+  6    369,152,517      230,497,176      230,318,040       175,472        3,664
+  7    430,328,999      230,497,104      230,318,040       175,472        3,592
+  8    487,827,185      230,498,384      230,318,040       175,472        4,872
+  9    559,231,383      230,498,384      230,318,040       175,472        4,872
+ 10    621,718,728      230,498,384      230,318,040       175,472        4,872
+ 11    704,754,442      230,497,104      230,318,040       175,472        3,592
+ 12    767,018,449      230,497,176      230,318,040       175,472        3,664
+ 13    808,457,781      230,498,376      230,318,040       175,472        4,864
+
+```
+
+- Kao što možemo da vidimo, zauzeće memorije je slično kao u prošlom primeru, bez mnogo skokova u memoriji. Kada se dospe do 224MB, ne oscilira mnogo od te vredosti. Čak i potrošnja steka uvek ostaje između 3000 i 4000 bajtova.
+
+- **Zaključak**: Hip se relativno odgovorno koristi. Jeste da postoji veliki skok do 224MB, ali to je posledica same prirode programa, i kad se dospe do te velike potrošnje, retko se diže ili spušta.
+
+
+
+
+
+
