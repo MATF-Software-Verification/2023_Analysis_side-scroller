@@ -1,0 +1,1731 @@
+desc: (none)
+cmd: ../../28-side-scroller/build/side-scroller
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=8742004
+mem_heap_B=32
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=19195457
+mem_heap_B=392111
+mem_heap_extra_B=37401
+mem_stacks_B=0
+heap_tree=detailed
+n19: 392111 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x5AD0C19: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B89: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011C90: call_init (dl-init.c:30)
+    n1: 72704 0x4011C90: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 71376 in 179 places, all below massif's threshold (1.00%)
+ n1: 42066 0x400D273: _dl_new_object (dl-object.c:89)
+  n1: 42066 0x4006E96: _dl_map_object_from_fd (dl-load.c:997)
+   n2: 42066 0x400A61A: _dl_map_object (dl-load.c:2236)
+    n1: 39623 0x400F504: openaux (dl-deps.c:64)
+     n1: 39623 0x5D8B8B7: _dl_catch_exception (dl-error-skeleton.c:208)
+      n1: 39623 0x400F952: _dl_map_object_deps (dl-deps.c:248)
+       n1: 39623 0x4015D9F: dl_open_worker (dl-open.c:571)
+        n1: 39623 0x5D8B8B7: _dl_catch_exception (dl-error-skeleton.c:208)
+         n1: 39623 0x40155F9: _dl_open (dl-open.c:837)
+          n1: 39623 0x665534B: dlopen_doit (dlopen.c:66)
+           n1: 39623 0x5D8B8B7: _dl_catch_exception (dl-error-skeleton.c:208)
+            n1: 39623 0x5D8B982: _dl_catch_error (dl-error-skeleton.c:227)
+             n1: 39623 0x6655B58: _dlerror_run (dlerror.c:170)
+              n1: 39623 0x66553D9: dlopen@@GLIBC_2.2.5 (dlopen.c:87)
+               n2: 39623 0x576369E: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+                n1: 38424 0x575CD1C: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+                 n1: 38424 0x575D2E6: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+                  n1: 38424 0x57538C7: QFactoryLoader::instance(int) const (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+                   n1: 38424 0x5005F99: QPlatformIntegrationFactory::create(QString const&, QStringList const&, int&, char**, QString const&) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+                    n1: 38424 0x5013FA0: QGuiApplicationPrivate::createPlatformIntegration() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+                     n1: 38424 0x5015707: QGuiApplicationPrivate::createEventDispatcher() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+                      n1: 38424 0x576E084: QCoreApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+                       n1: 38424 0x5017542: QGuiApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+                        n1: 38424 0x49CC3BC: QApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+                         n0: 38424 0x115FE9: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+                n0: 1199 in 1 place, below massif's threshold (1.00%)
+    n0: 2443 in 1 place, below massif's threshold (1.00%)
+ n3: 36824 0x5608F27: QMapDataBase::createNode(int, int, QMapNodeBase*, bool) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+  n1: 22848 0x90ABB99: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+   n1: 22848 0x90C9953: QXcbConnection::initializeScreens() (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+    n1: 22848 0x9099528: QXcbConnection::QXcbConnection(QXcbNativeInterface*, bool, unsigned int, char const*) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+     n1: 22848 0x909E069: QXcbIntegration::QXcbIntegration(QStringList const&, int&, char**) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+      n1: 22848 0x4843512: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/libqxcb.so)
+       n1: 22848 0x5005FC2: QPlatformIntegrationFactory::create(QString const&, QStringList const&, int&, char**, QString const&) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n1: 22848 0x5013FA0: QGuiApplicationPrivate::createPlatformIntegration() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+         n1: 22848 0x5015707: QGuiApplicationPrivate::createEventDispatcher() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+          n1: 22848 0x576E084: QCoreApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+           n1: 22848 0x5017542: QGuiApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+            n1: 22848 0x49CC3BC: QApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+             n0: 22848 0x115FE9: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+  n1: 13056 0x90ABB5E: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+   n1: 13056 0x90C9953: QXcbConnection::initializeScreens() (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+    n1: 13056 0x9099528: QXcbConnection::QXcbConnection(QXcbNativeInterface*, bool, unsigned int, char const*) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+     n1: 13056 0x909E069: QXcbIntegration::QXcbIntegration(QStringList const&, int&, char**) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+      n1: 13056 0x4843512: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/libqxcb.so)
+       n1: 13056 0x5005FC2: QPlatformIntegrationFactory::create(QString const&, QStringList const&, int&, char**, QString const&) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n1: 13056 0x5013FA0: QGuiApplicationPrivate::createPlatformIntegration() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+         n1: 13056 0x5015707: QGuiApplicationPrivate::createEventDispatcher() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+          n1: 13056 0x576E084: QCoreApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+           n1: 13056 0x5017542: QGuiApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+            n1: 13056 0x49CC3BC: QApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+             n0: 13056 0x115FE9: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+  n0: 920 in 5 places, all below massif's threshold (1.00%)
+ n1: 22848 0x855B994: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+  n1: 22848 0x90C7BFF: QXcbBasicConnection::QXcbBasicConnection(char const*) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+   n1: 22848 0x9099321: QXcbConnection::QXcbConnection(QXcbNativeInterface*, bool, unsigned int, char const*) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+    n1: 22848 0x909E069: QXcbIntegration::QXcbIntegration(QStringList const&, int&, char**) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+     n1: 22848 0x4843512: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/libqxcb.so)
+      n1: 22848 0x5005FC2: QPlatformIntegrationFactory::create(QString const&, QStringList const&, int&, char**, QString const&) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+       n1: 22848 0x5013FA0: QGuiApplicationPrivate::createPlatformIntegration() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n1: 22848 0x5015707: QGuiApplicationPrivate::createEventDispatcher() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+         n1: 22848 0x576E084: QCoreApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+          n1: 22848 0x5017542: QGuiApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+           n1: 22848 0x49CC3BC: QApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+            n0: 22848 0x115FE9: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+ n1: 21168 0x8675884: xcb_connect_to_fd (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+  n1: 21168 0x8679B72: xcb_connect_to_display_with_auth_info (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+   n1: 21168 0x856AB79: _XConnectXCB (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+    n1: 21168 0x855B318: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+     n1: 21168 0x90C7BFF: QXcbBasicConnection::QXcbBasicConnection(char const*) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+      n1: 21168 0x9099321: QXcbConnection::QXcbConnection(QXcbNativeInterface*, bool, unsigned int, char const*) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+       n1: 21168 0x909E069: QXcbIntegration::QXcbIntegration(QStringList const&, int&, char**) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+        n1: 21168 0x4843512: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/libqxcb.so)
+         n1: 21168 0x5005FC2: QPlatformIntegrationFactory::create(QString const&, QStringList const&, int&, char**, QString const&) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+          n1: 21168 0x5013FA0: QGuiApplicationPrivate::createPlatformIntegration() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+           n1: 21168 0x5015707: QGuiApplicationPrivate::createEventDispatcher() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+            n1: 21168 0x576E084: QCoreApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+             n1: 21168 0x5017542: QGuiApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+              n1: 21168 0x49CC3BC: QApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+               n0: 21168 0x115FE9: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+ n2: 17216 0x674DE98: g_malloc (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.6)
+  n1: 16384 0x67587D3: ??? (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.6)
+   n1: 16384 0x4011B89: call_init.part.0 (dl-init.c:72)
+    n1: 16384 0x4011C90: call_init (dl-init.c:30)
+     n1: 16384 0x4011C90: _dl_init (dl-init.c:119)
+      n0: 16384 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+  n0: 832 in 2 places, all below massif's threshold (1.00%)
+ n1: 16384 0x855B62F: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+  n1: 16384 0x90C7BFF: QXcbBasicConnection::QXcbBasicConnection(char const*) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+   n1: 16384 0x9099321: QXcbConnection::QXcbConnection(QXcbNativeInterface*, bool, unsigned int, char const*) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+    n1: 16384 0x909E069: QXcbIntegration::QXcbIntegration(QStringList const&, int&, char**) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+     n1: 16384 0x4843512: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/libqxcb.so)
+      n1: 16384 0x5005FC2: QPlatformIntegrationFactory::create(QString const&, QStringList const&, int&, char**, QString const&) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+       n1: 16384 0x5013FA0: QGuiApplicationPrivate::createPlatformIntegration() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n1: 16384 0x5015707: QGuiApplicationPrivate::createEventDispatcher() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+         n1: 16384 0x576E084: QCoreApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+          n1: 16384 0x5017542: QGuiApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+           n1: 16384 0x49CC3BC: QApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+            n0: 16384 0x115FE9: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+ n2: 16352 0x8560DC5: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+  n1: 8176 0x8560FEC: _XrmInternalStringToQuark (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+   n1: 8176 0x857AFCC: _XlcGetCharSet (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+    n1: 8176 0x857ABEC: _XlcAddCT (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+     n1: 8176 0x857AF17: _XlcInitCTInfo (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+      n1: 8176 0x85810C6: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+       n1: 8176 0x85807A6: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+        n1: 8176 0x8580FAC: _XlcCreateLC (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+         n1: 8176 0x85A24E4: _XlcUtf8Loader (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+          n1: 8176 0x85887E5: _XOpenLC (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+           n1: 8176 0x858891C: _XlcCurrentLC (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+            n1: 8176 0x8588B5E: XmbTextListToTextProperty (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+             n1: 8176 0x90B0173: QXcbWindow::setWindowTitle(QXcbConnection const*, unsigned int, QString const&) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+              n1: 8176 0x9098A74: QXcbConnection::getQtSelectionOwner() (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+               n1: 8176 0x90A57C0: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+                n1: 8176 0x90C9D8B: QXcbConnection::initializeScreens() (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+                 n1: 8176 0x9099528: QXcbConnection::QXcbConnection(QXcbNativeInterface*, bool, unsigned int, char const*) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+                  n1: 8176 0x909E069: QXcbIntegration::QXcbIntegration(QStringList const&, int&, char**) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+                   n1: 8176 0x4843512: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/libqxcb.so)
+                    n1: 8176 0x5005FC2: QPlatformIntegrationFactory::create(QString const&, QStringList const&, int&, char**, QString const&) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+                     n1: 8176 0x5013FA0: QGuiApplicationPrivate::createPlatformIntegration() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+                      n1: 8176 0x5015707: QGuiApplicationPrivate::createEventDispatcher() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+                       n1: 8176 0x576E084: QCoreApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+                        n1: 8176 0x5017542: QGuiApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+                         n1: 8176 0x49CC3BC: QApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+                          n0: 8176 0x115FE9: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+  n1: 8176 0x85612EA: _XrmInternalStringToQuark (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+   n1: 8176 0x857CE21: _XlcGetLocaleDataBase (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+    n1: 8176 0x857F8F8: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+     n1: 8176 0x85807B2: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+      n1: 8176 0x8580FAC: _XlcCreateLC (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+       n1: 8176 0x85A24E4: _XlcUtf8Loader (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+        n1: 8176 0x85887E5: _XOpenLC (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+         n1: 8176 0x858891C: _XlcCurrentLC (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+          n1: 8176 0x8588B5E: XmbTextListToTextProperty (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+           n1: 8176 0x90B0173: QXcbWindow::setWindowTitle(QXcbConnection const*, unsigned int, QString const&) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+            n1: 8176 0x9098A74: QXcbConnection::getQtSelectionOwner() (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+             n1: 8176 0x90A57C0: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+              n1: 8176 0x90C9D8B: QXcbConnection::initializeScreens() (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+               n1: 8176 0x9099528: QXcbConnection::QXcbConnection(QXcbNativeInterface*, bool, unsigned int, char const*) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+                n1: 8176 0x909E069: QXcbIntegration::QXcbIntegration(QStringList const&, int&, char**) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+                 n1: 8176 0x4843512: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/libqxcb.so)
+                  n1: 8176 0x5005FC2: QPlatformIntegrationFactory::create(QString const&, QStringList const&, int&, char**, QString const&) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+                   n1: 8176 0x5013FA0: QGuiApplicationPrivate::createPlatformIntegration() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+                    n1: 8176 0x5015707: QGuiApplicationPrivate::createEventDispatcher() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+                     n1: 8176 0x576E084: QCoreApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+                      n1: 8176 0x5017542: QGuiApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+                       n1: 8176 0x49CC3BC: QApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+                        n0: 8176 0x115FE9: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+ n1: 12288 0x978F3A1: xkb_x11_keymap_new_from_device (in /usr/lib/x86_64-linux-gnu/libxkbcommon-x11.so.0.0.0)
+  n1: 12288 0x90A24AB: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+   n1: 12288 0x90A28AA: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+    n1: 12288 0x90995E3: QXcbConnection::QXcbConnection(QXcbNativeInterface*, bool, unsigned int, char const*) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+     n1: 12288 0x909E069: QXcbIntegration::QXcbIntegration(QStringList const&, int&, char**) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+      n1: 12288 0x4843512: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/libqxcb.so)
+       n1: 12288 0x5005FC2: QPlatformIntegrationFactory::create(QString const&, QStringList const&, int&, char**, QString const&) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n1: 12288 0x5013FA0: QGuiApplicationPrivate::createPlatformIntegration() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+         n1: 12288 0x5015707: QGuiApplicationPrivate::createEventDispatcher() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+          n1: 12288 0x576E084: QCoreApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+           n1: 12288 0x5017542: QGuiApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+            n1: 12288 0x49CC3BC: QApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+             n0: 12288 0x115FE9: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+ n1: 11616 0x978F930: xkb_x11_keymap_new_from_device (in /usr/lib/x86_64-linux-gnu/libxkbcommon-x11.so.0.0.0)
+  n1: 11616 0x90A24AB: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+   n1: 11616 0x90A28AA: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+    n1: 11616 0x90995E3: QXcbConnection::QXcbConnection(QXcbNativeInterface*, bool, unsigned int, char const*) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+     n1: 11616 0x909E069: QXcbIntegration::QXcbIntegration(QStringList const&, int&, char**) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+      n1: 11616 0x4843512: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/libqxcb.so)
+       n1: 11616 0x5005FC2: QPlatformIntegrationFactory::create(QString const&, QStringList const&, int&, char**, QString const&) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n1: 11616 0x5013FA0: QGuiApplicationPrivate::createPlatformIntegration() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+         n1: 11616 0x5015707: QGuiApplicationPrivate::createEventDispatcher() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+          n1: 11616 0x576E084: QCoreApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+           n1: 11616 0x5017542: QGuiApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+            n1: 11616 0x49CC3BC: QApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+             n0: 11616 0x115FE9: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+ n1: 10004 0x8675A62: xcb_connect_to_fd (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+  n1: 10004 0x8679B72: xcb_connect_to_display_with_auth_info (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+   n1: 10004 0x856AB79: _XConnectXCB (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+    n1: 10004 0x855B318: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+     n1: 10004 0x90C7BFF: QXcbBasicConnection::QXcbBasicConnection(char const*) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+      n1: 10004 0x9099321: QXcbConnection::QXcbConnection(QXcbNativeInterface*, bool, unsigned int, char const*) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+       n1: 10004 0x909E069: QXcbIntegration::QXcbIntegration(QStringList const&, int&, char**) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+        n1: 10004 0x4843512: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/libqxcb.so)
+         n1: 10004 0x5005FC2: QPlatformIntegrationFactory::create(QString const&, QStringList const&, int&, char**, QString const&) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+          n1: 10004 0x5013FA0: QGuiApplicationPrivate::createPlatformIntegration() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+           n1: 10004 0x5015707: QGuiApplicationPrivate::createEventDispatcher() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+            n1: 10004 0x576E084: QCoreApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+             n1: 10004 0x5017542: QGuiApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+              n1: 10004 0x49CC3BC: QApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+               n0: 10004 0x115FE9: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+ n1: 9053 0x55AB240: QArrayData::allocate(unsigned long, unsigned long, unsigned long, QFlags<QArrayData::AllocationOption>) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+  n0: 9053 in 27 places, all below massif's threshold (1.00%)
+ n1: 7704 0x401330A: _dl_check_map_versions (dl-version.c:274)
+  n1: 7704 0x40160EC: dl_open_worker (dl-open.c:577)
+   n1: 7704 0x5D8B8B7: _dl_catch_exception (dl-error-skeleton.c:208)
+    n1: 7704 0x40155F9: _dl_open (dl-open.c:837)
+     n1: 7704 0x665534B: dlopen_doit (dlopen.c:66)
+      n1: 7704 0x5D8B8B7: _dl_catch_exception (dl-error-skeleton.c:208)
+       n1: 7704 0x5D8B982: _dl_catch_error (dl-error-skeleton.c:227)
+        n1: 7704 0x6655B58: _dlerror_run (dlerror.c:170)
+         n1: 7704 0x66553D9: dlopen@@GLIBC_2.2.5 (dlopen.c:87)
+          n2: 7704 0x576369E: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+           n1: 7440 0x575CD1C: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+            n1: 7440 0x575D2E6: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+             n1: 7440 0x57538C7: QFactoryLoader::instance(int) const (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+              n1: 7440 0x5005F99: QPlatformIntegrationFactory::create(QString const&, QStringList const&, int&, char**, QString const&) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+               n1: 7440 0x5013FA0: QGuiApplicationPrivate::createPlatformIntegration() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+                n1: 7440 0x5015707: QGuiApplicationPrivate::createEventDispatcher() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+                 n1: 7440 0x576E084: QCoreApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+                  n1: 7440 0x5017542: QGuiApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+                   n1: 7440 0x49CC3BC: QApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+                    n0: 7440 0x115FE9: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+           n0: 264 in 1 place, below massif's threshold (1.00%)
+ n1: 5376 0x978F8C5: xkb_x11_keymap_new_from_device (in /usr/lib/x86_64-linux-gnu/libxkbcommon-x11.so.0.0.0)
+  n1: 5376 0x90A24AB: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+   n1: 5376 0x90A28AA: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+    n1: 5376 0x90995E3: QXcbConnection::QXcbConnection(QXcbNativeInterface*, bool, unsigned int, char const*) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+     n1: 5376 0x909E069: QXcbIntegration::QXcbIntegration(QStringList const&, int&, char**) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+      n1: 5376 0x4843512: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/libqxcb.so)
+       n1: 5376 0x5005FC2: QPlatformIntegrationFactory::create(QString const&, QStringList const&, int&, char**, QString const&) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n1: 5376 0x5013FA0: QGuiApplicationPrivate::createPlatformIntegration() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+         n1: 5376 0x5015707: QGuiApplicationPrivate::createEventDispatcher() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+          n1: 5376 0x576E084: QCoreApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+           n1: 5376 0x5017542: QGuiApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+            n1: 5376 0x49CC3BC: QApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+             n0: 5376 0x115FE9: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+ n1: 5016 0x57E996F: QJsonObject::detach2(unsigned int) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+  n2: 5016 0x57E9F36: QJsonObject::insert(QString const&, QJsonValue const&) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+   n1: 5016 0x5752DCE: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+    n1: 5016 0x57531D3: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+     n1: 5016 0x5760CB6: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+      n1: 5016 0x57611D0: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+       n1: 5016 0x57544C4: QFactoryLoader::update() (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+        n1: 5016 0x5755852: QFactoryLoader::QFactoryLoader(char const*, QString const&, Qt::CaseSensitivity) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+         n1: 5016 0x5006489: QPlatformIntegrationFactory::keys(QString const&) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+          n1: 5016 0x5013D58: QGuiApplicationPrivate::createPlatformIntegration() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+           n1: 5016 0x5015707: QGuiApplicationPrivate::createEventDispatcher() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+            n1: 5016 0x576E084: QCoreApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+             n1: 5016 0x5017542: QGuiApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+              n1: 5016 0x49CC3BC: QApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+               n0: 5016 0x115FE9: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 5000 0x674DEF0: g_malloc0 (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.6)
+  n0: 5000 in 4 places, all below massif's threshold (1.00%)
+ n1: 4688 0x855B2E1: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+  n1: 4688 0x90C7BFF: QXcbBasicConnection::QXcbBasicConnection(char const*) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+   n1: 4688 0x9099321: QXcbConnection::QXcbConnection(QXcbNativeInterface*, bool, unsigned int, char const*) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+    n1: 4688 0x909E069: QXcbIntegration::QXcbIntegration(QStringList const&, int&, char**) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+     n1: 4688 0x4843512: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/libqxcb.so)
+      n1: 4688 0x5005FC2: QPlatformIntegrationFactory::create(QString const&, QStringList const&, int&, char**, QString const&) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+       n1: 4688 0x5013FA0: QGuiApplicationPrivate::createPlatformIntegration() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n1: 4688 0x5015707: QGuiApplicationPrivate::createEventDispatcher() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+         n1: 4688 0x576E084: QCoreApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+          n1: 4688 0x5017542: QGuiApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+           n1: 4688 0x49CC3BC: QApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+            n0: 4688 0x115FE9: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+ n1: 4428 0x97900D9: xkb_x11_keymap_new_from_device (in /usr/lib/x86_64-linux-gnu/libxkbcommon-x11.so.0.0.0)
+  n1: 4428 0x90A24AB: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+   n1: 4428 0x90A28AA: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+    n1: 4428 0x90995E3: QXcbConnection::QXcbConnection(QXcbNativeInterface*, bool, unsigned int, char const*) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+     n1: 4428 0x909E069: QXcbIntegration::QXcbIntegration(QStringList const&, int&, char**) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+      n1: 4428 0x4843512: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/libqxcb.so)
+       n1: 4428 0x5005FC2: QPlatformIntegrationFactory::create(QString const&, QStringList const&, int&, char**, QString const&) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n1: 4428 0x5013FA0: QGuiApplicationPrivate::createPlatformIntegration() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+         n1: 4428 0x5015707: QGuiApplicationPrivate::createEventDispatcher() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+          n1: 4428 0x576E084: QCoreApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+           n1: 4428 0x5017542: QGuiApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+            n1: 4428 0x49CC3BC: QApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+             n0: 4428 0x115FE9: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+#-----------
+snapshot=3
+#-----------
+time=27344819
+mem_heap_B=565696
+mem_heap_extra_B=66696
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=36275266
+mem_heap_B=602445
+mem_heap_extra_B=105811
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=47333858
+mem_heap_B=707593
+mem_heap_extra_B=140191
+mem_stacks_B=0
+heap_tree=detailed
+n24: 707593 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 131046 in 237 places, all below massif's threshold (1.00%)
+ n1: 72704 0x5AD0C19: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B89: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011C90: call_init (dl-init.c:30)
+    n1: 72704 0x4011C90: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n3: 65408 0x91EE009: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+  n1: 32704 0x920B6ED: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+   n1: 32704 0x97E39D9: ??? (in /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.11)
+    n2: 32704 0x97E46AF: ??? (in /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.11)
+     n1: 16352 0x97E1B82: ??? (in /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.11)
+      n1: 16352 0x97E304D: ??? (in /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.11)
+       n1: 16352 0x97E6DBF: XML_ParseBuffer (in /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.11)
+        n1: 16352 0x9209F42: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+         n1: 16352 0x920A37B: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+          n1: 16352 0x920A58C: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+           n1: 16352 0x920AABE: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+            n1: 16352 0x97E39D9: ??? (in /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.11)
+             n1: 16352 0x97E46AF: ??? (in /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.11)
+              n1: 16352 0x97E1B82: ??? (in /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.11)
+               n1: 16352 0x97E304D: ??? (in /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.11)
+                n1: 16352 0x97E6DBF: XML_ParseBuffer (in /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.11)
+                 n1: 16352 0x9209F42: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+                  n1: 16352 0x920A37B: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+                   n1: 16352 0x91FBF77: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+                    n1: 16352 0x91FC1DA: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+                     n1: 16352 0x91EE156: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+                      n1: 16352 0x91F0156: FcConfigSubstituteWithPat (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+                       n1: 16352 0x91432FE: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+                        n1: 16352 0x5011F00: QGuiApplication::font() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+                         n1: 16352 0x50D27D4: QFont::QFont() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+                          n1: 16352 0xA4CDCF5: LXQtPlatformTheme::LXQtPlatformTheme() (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platformthemes/libqtlxqt.so)
+                           n1: 16352 0xA4CC449: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platformthemes/libqtlxqt.so)
+                            n1: 16352 0x500A867: QPlatformThemeFactory::create(QString const&, QString const&) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+                             n1: 16352 0x50141FF: QGuiApplicationPrivate::createPlatformIntegration() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+                              n0: 16352 0x5015707: QGuiApplicationPrivate::createEventDispatcher() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+     n1: 16352 0x97E6DBF: XML_ParseBuffer (in /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.11)
+      n1: 16352 0x9209F42: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+       n1: 16352 0x920A37B: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+        n1: 16352 0x920A58C: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+         n1: 16352 0x920AABE: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+          n1: 16352 0x97E39D9: ??? (in /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.11)
+           n1: 16352 0x97E46AF: ??? (in /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.11)
+            n1: 16352 0x97E1B82: ??? (in /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.11)
+             n1: 16352 0x97E304D: ??? (in /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.11)
+              n1: 16352 0x97E6DBF: XML_ParseBuffer (in /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.11)
+               n1: 16352 0x9209F42: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+                n1: 16352 0x920A37B: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+                 n1: 16352 0x91FBF77: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+                  n1: 16352 0x91FC1DA: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+                   n1: 16352 0x91EE156: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+                    n1: 16352 0x91F0156: FcConfigSubstituteWithPat (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+                     n1: 16352 0x91432FE: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+                      n1: 16352 0x5011F00: QGuiApplication::font() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+                       n1: 16352 0x50D27D4: QFont::QFont() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+                        n1: 16352 0xA4CDCF5: LXQtPlatformTheme::LXQtPlatformTheme() (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platformthemes/libqtlxqt.so)
+                         n1: 16352 0xA4CC449: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platformthemes/libqtlxqt.so)
+                          n1: 16352 0x500A867: QPlatformThemeFactory::create(QString const&, QString const&) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+                           n1: 16352 0x50141FF: QGuiApplicationPrivate::createPlatformIntegration() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+                            n1: 16352 0x5015707: QGuiApplicationPrivate::createEventDispatcher() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+                             n1: 16352 0x576E084: QCoreApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+                              n0: 16352 0x5017542: QGuiApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+  n1: 16352 0x9209647: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+   n0: 16352 in 2 places, all below massif's threshold (1.00%)
+  n1: 16352 0x92097D5: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+   n1: 16352 0x9209A17: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+    n0: 16352 in 2 places, all below massif's threshold (1.00%)
+ n1: 45730 0x400D273: _dl_new_object (dl-object.c:89)
+  n1: 45730 0x4006E96: _dl_map_object_from_fd (dl-load.c:997)
+   n2: 45730 0x400A61A: _dl_map_object (dl-load.c:2236)
+    n1: 42037 0x400F504: openaux (dl-deps.c:64)
+     n1: 42037 0x5D8B8B7: _dl_catch_exception (dl-error-skeleton.c:208)
+      n1: 42037 0x400F952: _dl_map_object_deps (dl-deps.c:248)
+       n1: 42037 0x4015D9F: dl_open_worker (dl-open.c:571)
+        n1: 42037 0x5D8B8B7: _dl_catch_exception (dl-error-skeleton.c:208)
+         n1: 42037 0x40155F9: _dl_open (dl-open.c:837)
+          n1: 42037 0x665534B: dlopen_doit (dlopen.c:66)
+           n1: 42037 0x5D8B8B7: _dl_catch_exception (dl-error-skeleton.c:208)
+            n1: 42037 0x5D8B982: _dl_catch_error (dl-error-skeleton.c:227)
+             n1: 42037 0x6655B58: _dlerror_run (dlerror.c:170)
+              n1: 42037 0x66553D9: dlopen@@GLIBC_2.2.5 (dlopen.c:87)
+               n2: 42037 0x576369E: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+                n1: 40838 0x575CD1C: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+                 n1: 40838 0x575D2E6: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+                  n2: 40838 0x57538C7: QFactoryLoader::instance(int) const (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+                   n1: 38424 0x5005F99: QPlatformIntegrationFactory::create(QString const&, QStringList const&, int&, char**, QString const&) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+                    n1: 38424 0x5013FA0: QGuiApplicationPrivate::createPlatformIntegration() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+                     n1: 38424 0x5015707: QGuiApplicationPrivate::createEventDispatcher() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+                      n1: 38424 0x576E084: QCoreApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+                       n1: 38424 0x5017542: QGuiApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+                        n1: 38424 0x49CC3BC: QApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+                         n0: 38424 0x115FE9: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+                   n0: 2414 in 1 place, below massif's threshold (1.00%)
+                n0: 1199 in 1 place, below massif's threshold (1.00%)
+    n0: 3693 in 1 place, below massif's threshold (1.00%)
+ n3: 44094 0x5CCA50E: strdup (strdup.c:42)
+  n1: 17825 0x920B707: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+   n1: 17825 0x97E39D9: ??? (in /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.11)
+    n2: 17825 0x97E46AF: ??? (in /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.11)
+     n1: 14713 0x97E1B82: ??? (in /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.11)
+      n1: 14713 0x97E304D: ??? (in /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.11)
+       n2: 14713 0x97E6DBF: XML_ParseBuffer (in /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.11)
+        n1: 10886 0x9209F42: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+         n1: 10886 0x920A37B: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+          n1: 10886 0x920A58C: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+           n1: 10886 0x920AABE: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+            n1: 10886 0x97E39D9: ??? (in /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.11)
+             n1: 10886 0x97E46AF: ??? (in /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.11)
+              n1: 10886 0x97E1B82: ??? (in /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.11)
+               n1: 10886 0x97E304D: ??? (in /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.11)
+                n1: 10886 0x97E6DBF: XML_ParseBuffer (in /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.11)
+                 n1: 10886 0x9209F42: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+                  n1: 10886 0x920A37B: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+                   n1: 10886 0x91FBF77: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+                    n1: 10886 0x91FC1DA: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+                     n1: 10886 0x91EE156: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+                      n1: 10886 0x91F0156: FcConfigSubstituteWithPat (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+                       n1: 10886 0x91432FE: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+                        n1: 10886 0x5011F00: QGuiApplication::font() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+                         n1: 10886 0x50D27D4: QFont::QFont() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+                          n1: 10886 0xA4CDCF5: LXQtPlatformTheme::LXQtPlatformTheme() (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platformthemes/libqtlxqt.so)
+                           n1: 10886 0xA4CC449: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platformthemes/libqtlxqt.so)
+                            n1: 10886 0x500A867: QPlatformThemeFactory::create(QString const&, QString const&) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+                             n1: 10886 0x50141FF: QGuiApplicationPrivate::createPlatformIntegration() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+                              n0: 10886 0x5015707: QGuiApplicationPrivate::createEventDispatcher() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n0: 3827 in 1 place, below massif's threshold (1.00%)
+     n0: 3112 in 1 place, below massif's threshold (1.00%)
+  n0: 13417 in 28 places, all below massif's threshold (1.00%)
+  n1: 12852 0x9207DD5: FcStrSetAdd (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+   n0: 12852 in 7 places, all below massif's threshold (1.00%)
+ n3: 36984 0x5608F27: QMapDataBase::createNode(int, int, QMapNodeBase*, bool) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+  n1: 22848 0x90ABB99: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+   n1: 22848 0x90C9953: QXcbConnection::initializeScreens() (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+    n1: 22848 0x9099528: QXcbConnection::QXcbConnection(QXcbNativeInterface*, bool, unsigned int, char const*) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+     n1: 22848 0x909E069: QXcbIntegration::QXcbIntegration(QStringList const&, int&, char**) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+      n1: 22848 0x4843512: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/libqxcb.so)
+       n1: 22848 0x5005FC2: QPlatformIntegrationFactory::create(QString const&, QStringList const&, int&, char**, QString const&) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n1: 22848 0x5013FA0: QGuiApplicationPrivate::createPlatformIntegration() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+         n1: 22848 0x5015707: QGuiApplicationPrivate::createEventDispatcher() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+          n1: 22848 0x576E084: QCoreApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+           n1: 22848 0x5017542: QGuiApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+            n1: 22848 0x49CC3BC: QApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+             n0: 22848 0x115FE9: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+  n1: 13056 0x90ABB5E: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+   n1: 13056 0x90C9953: QXcbConnection::initializeScreens() (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+    n1: 13056 0x9099528: QXcbConnection::QXcbConnection(QXcbNativeInterface*, bool, unsigned int, char const*) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+     n1: 13056 0x909E069: QXcbIntegration::QXcbIntegration(QStringList const&, int&, char**) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+      n1: 13056 0x4843512: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/libqxcb.so)
+       n1: 13056 0x5005FC2: QPlatformIntegrationFactory::create(QString const&, QStringList const&, int&, char**, QString const&) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n1: 13056 0x5013FA0: QGuiApplicationPrivate::createPlatformIntegration() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+         n1: 13056 0x5015707: QGuiApplicationPrivate::createEventDispatcher() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+          n1: 13056 0x576E084: QCoreApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+           n1: 13056 0x5017542: QGuiApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+            n1: 13056 0x49CC3BC: QApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+             n0: 13056 0x115FE9: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+  n0: 1080 in 5 places, all below massif's threshold (1.00%)
+ n2: 34008 0x9208974: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+  n0: 21960 in 5 places, all below massif's threshold (1.00%)
+  n1: 12048 0x920C627: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+   n1: 12048 0x97E39D9: ??? (in /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.11)
+    n2: 12048 0x97E46AF: ??? (in /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.11)
+     n1: 10248 0x97E1B82: ??? (in /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.11)
+      n1: 10248 0x97E304D: ??? (in /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.11)
+       n1: 10248 0x97E6DBF: XML_ParseBuffer (in /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.11)
+        n0: 10248 in 2 places, all below massif's threshold (1.00%)
+     n0: 1800 in 1 place, below massif's threshold (1.00%)
+ n1: 32816 0x5D09098: __alloc_dir (opendir.c:118)
+  n1: 32816 0x5D09098: opendir_tail (opendir.c:69)
+   n2: 32816 0x5D09098: opendir (opendir.c:92)
+    n1: 32816 0x920A3C7: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+     n1: 32816 0x920AABE: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+      n1: 32816 0x97E39D9: ??? (in /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.11)
+       n1: 32816 0x97E46AF: ??? (in /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.11)
+        n1: 32816 0x97E1B82: ??? (in /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.11)
+         n1: 32816 0x97E304D: ??? (in /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.11)
+          n1: 32816 0x97E6DBF: XML_ParseBuffer (in /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.11)
+           n1: 32816 0x9209F42: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+            n1: 32816 0x920A37B: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+             n1: 32816 0x91FBF77: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+              n1: 32816 0x91FC1DA: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+               n1: 32816 0x91EE156: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+                n1: 32816 0x91F0156: FcConfigSubstituteWithPat (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+                 n1: 32816 0x91432FE: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+                  n1: 32816 0x5011F00: QGuiApplication::font() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+                   n1: 32816 0x50D27D4: QFont::QFont() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+                    n1: 32816 0xA4CDCF5: LXQtPlatformTheme::LXQtPlatformTheme() (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platformthemes/libqtlxqt.so)
+                     n1: 32816 0xA4CC449: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platformthemes/libqtlxqt.so)
+                      n1: 32816 0x500A867: QPlatformThemeFactory::create(QString const&, QString const&) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+                       n1: 32816 0x50141FF: QGuiApplicationPrivate::createPlatformIntegration() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+                        n1: 32816 0x5015707: QGuiApplicationPrivate::createEventDispatcher() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+                         n1: 32816 0x576E084: QCoreApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+                          n1: 32816 0x5017542: QGuiApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+                           n1: 32816 0x49CC3BC: QApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+                            n0: 32816 0x115FE9: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 29536 0x97E705D: XML_GetBuffer (in /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.11)
+  n1: 29536 0x9209DDC: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+   n2: 29536 0x920A37B: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+    n1: 21344 0x920A58C: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+     n1: 21344 0x920AABE: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+      n1: 21344 0x97E39D9: ??? (in /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.11)
+       n1: 21344 0x97E46AF: ??? (in /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.11)
+        n1: 21344 0x97E1B82: ??? (in /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.11)
+         n1: 21344 0x97E304D: ??? (in /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.11)
+          n1: 21344 0x97E6DBF: XML_ParseBuffer (in /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.11)
+           n1: 21344 0x9209F42: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+            n1: 21344 0x920A37B: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+             n1: 21344 0x91FBF77: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+              n1: 21344 0x91FC1DA: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+               n1: 21344 0x91EE156: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+                n1: 21344 0x91F0156: FcConfigSubstituteWithPat (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+                 n1: 21344 0x91432FE: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+                  n1: 21344 0x5011F00: QGuiApplication::font() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+                   n1: 21344 0x50D27D4: QFont::QFont() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+                    n1: 21344 0xA4CDCF5: LXQtPlatformTheme::LXQtPlatformTheme() (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platformthemes/libqtlxqt.so)
+                     n1: 21344 0xA4CC449: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platformthemes/libqtlxqt.so)
+                      n1: 21344 0x500A867: QPlatformThemeFactory::create(QString const&, QString const&) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+                       n1: 21344 0x50141FF: QGuiApplicationPrivate::createPlatformIntegration() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+                        n1: 21344 0x5015707: QGuiApplicationPrivate::createEventDispatcher() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+                         n1: 21344 0x576E084: QCoreApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+                          n1: 21344 0x5017542: QGuiApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+                           n1: 21344 0x49CC3BC: QApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+                            n0: 21344 0x115FE9: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+    n0: 8192 in 1 place, below massif's threshold (1.00%)
+ n1: 22848 0x855B994: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+  n1: 22848 0x90C7BFF: QXcbBasicConnection::QXcbBasicConnection(char const*) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+   n1: 22848 0x9099321: QXcbConnection::QXcbConnection(QXcbNativeInterface*, bool, unsigned int, char const*) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+    n1: 22848 0x909E069: QXcbIntegration::QXcbIntegration(QStringList const&, int&, char**) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+     n1: 22848 0x4843512: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/libqxcb.so)
+      n1: 22848 0x5005FC2: QPlatformIntegrationFactory::create(QString const&, QStringList const&, int&, char**, QString const&) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+       n1: 22848 0x5013FA0: QGuiApplicationPrivate::createPlatformIntegration() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n1: 22848 0x5015707: QGuiApplicationPrivate::createEventDispatcher() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+         n1: 22848 0x576E084: QCoreApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+          n1: 22848 0x5017542: QGuiApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+           n1: 22848 0x49CC3BC: QApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+            n0: 22848 0x115FE9: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+ n1: 21168 0x8675884: xcb_connect_to_fd (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+  n1: 21168 0x8679B72: xcb_connect_to_display_with_auth_info (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+   n1: 21168 0x856AB79: _XConnectXCB (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+    n1: 21168 0x855B318: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+     n1: 21168 0x90C7BFF: QXcbBasicConnection::QXcbBasicConnection(char const*) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+      n1: 21168 0x9099321: QXcbConnection::QXcbConnection(QXcbNativeInterface*, bool, unsigned int, char const*) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+       n1: 21168 0x909E069: QXcbIntegration::QXcbIntegration(QStringList const&, int&, char**) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+        n1: 21168 0x4843512: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/libqxcb.so)
+         n1: 21168 0x5005FC2: QPlatformIntegrationFactory::create(QString const&, QStringList const&, int&, char**, QString const&) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+          n1: 21168 0x5013FA0: QGuiApplicationPrivate::createPlatformIntegration() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+           n1: 21168 0x5015707: QGuiApplicationPrivate::createEventDispatcher() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+            n1: 21168 0x576E084: QCoreApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+             n1: 21168 0x5017542: QGuiApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+              n1: 21168 0x49CC3BC: QApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+               n0: 21168 0x115FE9: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+ n2: 18384 0x9208E6B: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+  n1: 12048 0x920A6A9: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+   n1: 12048 0x97E39D9: ??? (in /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.11)
+    n2: 12048 0x97E46AF: ??? (in /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.11)
+     n1: 10248 0x97E1B82: ??? (in /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.11)
+      n1: 10248 0x97E304D: ??? (in /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.11)
+       n1: 10248 0x97E6DBF: XML_ParseBuffer (in /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.11)
+        n0: 10248 in 2 places, all below massif's threshold (1.00%)
+     n0: 1800 in 1 place, below massif's threshold (1.00%)
+  n0: 6336 in 1 place, below massif's threshold (1.00%)
+ n2: 17216 0x674DE98: g_malloc (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.6)
+  n1: 16384 0x67587D3: ??? (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.6)
+   n1: 16384 0x4011B89: call_init.part.0 (dl-init.c:72)
+    n1: 16384 0x4011C90: call_init (dl-init.c:30)
+     n1: 16384 0x4011C90: _dl_init (dl-init.c:119)
+      n0: 16384 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+  n0: 832 in 2 places, all below massif's threshold (1.00%)
+ n1: 16384 0x855B62F: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+  n1: 16384 0x90C7BFF: QXcbBasicConnection::QXcbBasicConnection(char const*) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+   n1: 16384 0x9099321: QXcbConnection::QXcbConnection(QXcbNativeInterface*, bool, unsigned int, char const*) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+    n1: 16384 0x909E069: QXcbIntegration::QXcbIntegration(QStringList const&, int&, char**) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+     n1: 16384 0x4843512: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/libqxcb.so)
+      n1: 16384 0x5005FC2: QPlatformIntegrationFactory::create(QString const&, QStringList const&, int&, char**, QString const&) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+       n1: 16384 0x5013FA0: QGuiApplicationPrivate::createPlatformIntegration() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n1: 16384 0x5015707: QGuiApplicationPrivate::createEventDispatcher() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+         n1: 16384 0x576E084: QCoreApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+          n1: 16384 0x5017542: QGuiApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+           n1: 16384 0x49CC3BC: QApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+            n0: 16384 0x115FE9: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+ n1: 16352 0x8560DC5: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+  n0: 16352 in 2 places, all below massif's threshold (1.00%)
+ n1: 15624 0x9208EF6: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+  n0: 15624 in 4 places, all below massif's threshold (1.00%)
+ n2: 13440 0x91FB876: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+  n1: 10320 0x91F151E: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+   n0: 10320 in 2 places, all below massif's threshold (1.00%)
+  n0: 3120 in 3 places, all below massif's threshold (1.00%)
+ n1: 12288 0x978F3A1: xkb_x11_keymap_new_from_device (in /usr/lib/x86_64-linux-gnu/libxkbcommon-x11.so.0.0.0)
+  n1: 12288 0x90A24AB: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+   n1: 12288 0x90A28AA: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+    n1: 12288 0x90995E3: QXcbConnection::QXcbConnection(QXcbNativeInterface*, bool, unsigned int, char const*) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+     n1: 12288 0x909E069: QXcbIntegration::QXcbIntegration(QStringList const&, int&, char**) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+      n1: 12288 0x4843512: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/libqxcb.so)
+       n1: 12288 0x5005FC2: QPlatformIntegrationFactory::create(QString const&, QStringList const&, int&, char**, QString const&) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n1: 12288 0x5013FA0: QGuiApplicationPrivate::createPlatformIntegration() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+         n1: 12288 0x5015707: QGuiApplicationPrivate::createEventDispatcher() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+          n1: 12288 0x576E084: QCoreApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+           n1: 12288 0x5017542: QGuiApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+            n1: 12288 0x49CC3BC: QApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+             n0: 12288 0x115FE9: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+ n2: 12288 0x9791364: ??? (in /usr/lib/x86_64-linux-gnu/libxkbcommon-x11.so.0.0.0)
+  n1: 12288 0x97903E0: xkb_x11_keymap_new_from_device (in /usr/lib/x86_64-linux-gnu/libxkbcommon-x11.so.0.0.0)
+   n1: 12288 0x90A24AB: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+    n1: 12288 0x90A28AA: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+     n1: 12288 0x90995E3: QXcbConnection::QXcbConnection(QXcbNativeInterface*, bool, unsigned int, char const*) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+      n1: 12288 0x909E069: QXcbIntegration::QXcbIntegration(QStringList const&, int&, char**) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+       n1: 12288 0x4843512: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/libqxcb.so)
+        n1: 12288 0x5005FC2: QPlatformIntegrationFactory::create(QString const&, QStringList const&, int&, char**, QString const&) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+         n1: 12288 0x5013FA0: QGuiApplicationPrivate::createPlatformIntegration() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+          n1: 12288 0x5015707: QGuiApplicationPrivate::createEventDispatcher() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+           n1: 12288 0x576E084: QCoreApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+            n1: 12288 0x5017542: QGuiApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+             n1: 12288 0x49CC3BC: QApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+              n0: 12288 0x115FE9: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+  n0: 0 in 2 places, all below massif's threshold (1.00%)
+ n1: 11616 0x978F930: xkb_x11_keymap_new_from_device (in /usr/lib/x86_64-linux-gnu/libxkbcommon-x11.so.0.0.0)
+  n1: 11616 0x90A24AB: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+   n1: 11616 0x90A28AA: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+    n1: 11616 0x90995E3: QXcbConnection::QXcbConnection(QXcbNativeInterface*, bool, unsigned int, char const*) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+     n1: 11616 0x909E069: QXcbIntegration::QXcbIntegration(QStringList const&, int&, char**) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+      n1: 11616 0x4843512: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/libqxcb.so)
+       n1: 11616 0x5005FC2: QPlatformIntegrationFactory::create(QString const&, QStringList const&, int&, char**, QString const&) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n1: 11616 0x5013FA0: QGuiApplicationPrivate::createPlatformIntegration() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+         n1: 11616 0x5015707: QGuiApplicationPrivate::createEventDispatcher() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+          n1: 11616 0x576E084: QCoreApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+           n1: 11616 0x5017542: QGuiApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+            n1: 11616 0x49CC3BC: QApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+             n0: 11616 0x115FE9: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+ n1: 10004 0x8675A62: xcb_connect_to_fd (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+  n1: 10004 0x8679B72: xcb_connect_to_display_with_auth_info (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+   n1: 10004 0x856AB79: _XConnectXCB (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+    n1: 10004 0x855B318: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+     n1: 10004 0x90C7BFF: QXcbBasicConnection::QXcbBasicConnection(char const*) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+      n1: 10004 0x9099321: QXcbConnection::QXcbConnection(QXcbNativeInterface*, bool, unsigned int, char const*) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+       n1: 10004 0x909E069: QXcbIntegration::QXcbIntegration(QStringList const&, int&, char**) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+        n1: 10004 0x4843512: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/libqxcb.so)
+         n1: 10004 0x5005FC2: QPlatformIntegrationFactory::create(QString const&, QStringList const&, int&, char**, QString const&) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+          n1: 10004 0x5013FA0: QGuiApplicationPrivate::createPlatformIntegration() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+           n1: 10004 0x5015707: QGuiApplicationPrivate::createEventDispatcher() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+            n1: 10004 0x576E084: QCoreApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+             n1: 10004 0x5017542: QGuiApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+              n1: 10004 0x49CC3BC: QApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+               n0: 10004 0x115FE9: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+ n1: 9799 0x55AB240: QArrayData::allocate(unsigned long, unsigned long, unsigned long, QFlags<QArrayData::AllocationOption>) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+  n0: 9799 in 27 places, all below massif's threshold (1.00%)
+ n2: 9216 0x92079B7: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+  n2: 9216 0x9207A86: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+   n1: 9216 0x920A2CB: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+    n0: 9216 in 2 places, all below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 8640 0x401330A: _dl_check_map_versions (dl-version.c:274)
+  n1: 8640 0x40160EC: dl_open_worker (dl-open.c:577)
+   n1: 8640 0x5D8B8B7: _dl_catch_exception (dl-error-skeleton.c:208)
+    n1: 8640 0x40155F9: _dl_open (dl-open.c:837)
+     n1: 8640 0x665534B: dlopen_doit (dlopen.c:66)
+      n1: 8640 0x5D8B8B7: _dl_catch_exception (dl-error-skeleton.c:208)
+       n1: 8640 0x5D8B982: _dl_catch_error (dl-error-skeleton.c:227)
+        n1: 8640 0x6655B58: _dlerror_run (dlerror.c:170)
+         n1: 8640 0x66553D9: dlopen@@GLIBC_2.2.5 (dlopen.c:87)
+          n1: 8640 0x576369E: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+           n0: 8640 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=6
+#-----------
+time=56041105
+mem_heap_B=637893
+mem_heap_extra_B=149803
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=63585081
+mem_heap_B=696274
+mem_heap_extra_B=154654
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=71840615
+mem_heap_B=716336
+mem_heap_extra_B=155136
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=84862566
+mem_heap_B=815530
+mem_heap_extra_B=165142
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=94196057
+mem_heap_B=3401296
+mem_heap_extra_B=172288
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=101591973
+mem_heap_B=3401296
+mem_heap_extra_B=172288
+mem_stacks_B=0
+heap_tree=detailed
+n10: 3401296 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2359296 0x50646AF: QImageData::create(QSize const&, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+  n1: 2359296 0x50647DE: QImage::QImage(QSize const&, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+   n1: 2359296 0x50CAACB: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+    n1: 2359296 0x50CC926: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+     n1: 2359296 0x508B73C: QImageReader::read(QImage*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+      n1: 2359296 0x508BEC8: QImageReader::read() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+       n1: 2359296 0x506423A: QImage::load(QString const&, char const*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n1: 2359296 0x11B9C9: Game::displayMainMenu() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+         n1: 2359296 0x11BD10: Game::reset() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+          n1: 2359296 0x11BE62: Game::Game(QGraphicsView*) (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+           n1: 2359296 0x11BFD6: Game::instance() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+            n0: 2359296 0x115FEE: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+ n0: 474304 in 549 places, all below massif's threshold (1.00%)
+ n2: 159145 0x55AB240: QArrayData::allocate(unsigned long, unsigned long, unsigned long, QFlags<QArrayData::AllocationOption>) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+  n0: 82665 in 42 places, all below massif's threshold (1.00%)
+  n1: 76480 0x4D229C8: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+   n1: 76480 0x4D19365: QGraphicsViewPrivate::QGraphicsViewPrivate() (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+    n1: 76480 0x4D193D3: QGraphicsView::QGraphicsView(QWidget*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+     n1: 76480 0x11BD5C: Game::Game(QGraphicsView*) (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+      n1: 76480 0x11BFD6: Game::instance() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+       n0: 76480 0x115FEE: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+ n1: 100387 0x400D273: _dl_new_object (dl-object.c:89)
+  n1: 100387 0x4006E96: _dl_map_object_from_fd (dl-load.c:997)
+   n2: 100387 0x400A61A: _dl_map_object (dl-load.c:2236)
+    n1: 81706 0x400F504: openaux (dl-deps.c:64)
+     n1: 81706 0x5D8B8B7: _dl_catch_exception (dl-error-skeleton.c:208)
+      n1: 81706 0x400F952: _dl_map_object_deps (dl-deps.c:248)
+       n1: 81706 0x4015D9F: dl_open_worker (dl-open.c:571)
+        n1: 81706 0x5D8B8B7: _dl_catch_exception (dl-error-skeleton.c:208)
+         n1: 81706 0x40155F9: _dl_open (dl-open.c:837)
+          n1: 81706 0x665534B: dlopen_doit (dlopen.c:66)
+           n1: 81706 0x5D8B8B7: _dl_catch_exception (dl-error-skeleton.c:208)
+            n1: 81706 0x5D8B982: _dl_catch_error (dl-error-skeleton.c:227)
+             n1: 81706 0x6655B58: _dlerror_run (dlerror.c:170)
+              n1: 81706 0x66553D9: dlopen@@GLIBC_2.2.5 (dlopen.c:87)
+               n2: 81706 0x576369E: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+                n1: 80507 0x575CD1C: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+                 n1: 80507 0x575D2E6: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+                  n2: 80507 0x57538C7: QFactoryLoader::instance(int) const (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+                   n0: 42083 in 3 places, all below massif's threshold (1.00%)
+                   n1: 38424 0x5005F99: QPlatformIntegrationFactory::create(QString const&, QStringList const&, int&, char**, QString const&) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+                    n1: 38424 0x5013FA0: QGuiApplicationPrivate::createPlatformIntegration() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+                     n1: 38424 0x5015707: QGuiApplicationPrivate::createEventDispatcher() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+                      n1: 38424 0x576E084: QCoreApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+                       n1: 38424 0x5017542: QGuiApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+                        n1: 38424 0x49CC3BC: QApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+                         n0: 38424 0x115FE9: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+                n0: 1199 in 1 place, below massif's threshold (1.00%)
+    n0: 18681 in 1 place, below massif's threshold (1.00%)
+ n1: 72704 0x5AD0C19: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B89: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011C90: call_init (dl-init.c:30)
+    n1: 72704 0x4011C90: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n1: 65408 0x91EE009: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+  n0: 65408 in 3 places, all below massif's threshold (1.00%)
+ n1: 46236 0x5CCA50E: strdup (strdup.c:42)
+  n0: 46236 in 38 places, all below massif's threshold (1.00%)
+ n1: 45912 0x5608F27: QMapDataBase::createNode(int, int, QMapNodeBase*, bool) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+  n0: 45912 in 31 places, all below massif's threshold (1.00%)
+ n1: 41232 0x6020397: png_malloc_warn (in /usr/lib/x86_64-linux-gnu/libpng16.so.16.37.0)
+  n0: 41232 in 3 places, all below massif's threshold (1.00%)
+ n1: 36672 0x9208974: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+  n0: 36672 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=12
+#-----------
+time=182786137
+mem_heap_B=3396688
+mem_heap_extra_B=172280
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=184922841
+mem_heap_B=5842340
+mem_heap_extra_B=174108
+mem_stacks_B=0
+heap_tree=detailed
+n6: 5842340 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 4807960 0x50646AF: QImageData::create(QSize const&, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+  n2: 4807960 0x50647DE: QImage::QImage(QSize const&, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+   n1: 4718592 0x50CAACB: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+    n1: 4718592 0x50CC926: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+     n1: 4718592 0x508B73C: QImageReader::read(QImage*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+      n2: 4718592 0x508BEC8: QImageReader::read() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+       n1: 2359296 0x506423A: QImage::load(QString const&, char const*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n1: 2359296 0x11B9C9: Game::displayMainMenu() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+         n1: 2359296 0x11BD10: Game::reset() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+          n1: 2359296 0x11BE62: Game::Game(QGraphicsView*) (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+           n1: 2359296 0x11BFD6: Game::instance() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+            n0: 2359296 0x115FEE: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+       n1: 2359296 0x50A8300: QPlatformPixmap::fromFile(QString const&, char const*, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n2: 2359296 0x50A1B36: QPixmap::load(QString const&, char const*, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+         n1: 2359296 0x11BEC1: Game::Game(QGraphicsView*) (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+          n1: 2359296 0x11BFD6: Game::instance() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+           n0: 2359296 0x115FEE: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+         n0: 0 in 2 places, all below massif's threshold (1.00%)
+   n1: 89368 0x506481C: QImage::QImage(int, int, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+    n1: 89368 0x5067F05: QImage::convertToFormat_helper(QImage::Format, QFlags<Qt::ImageConversionFlag>) const (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+     n1: 89368 0x50A9066: QRasterPlatformPixmap::createPixmapForImage(QImage, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+      n1: 89368 0x50A935D: QRasterPlatformPixmap::fromImage(QImage const&, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+       n1: 89368 0x50A8356: QPlatformPixmap::fromFile(QString const&, char const*, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n1: 89368 0x50A1B36: QPixmap::load(QString const&, char const*, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+         n0: 89368 in 2 places, all below massif's threshold (1.00%)
+ n0: 602752 in 567 places, all below massif's threshold (1.00%)
+ n2: 193129 0x55AB240: QArrayData::allocate(unsigned long, unsigned long, unsigned long, QFlags<QArrayData::AllocationOption>) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+  n0: 116649 in 43 places, all below massif's threshold (1.00%)
+  n1: 76480 0x4D229C8: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+   n1: 76480 0x4D19365: QGraphicsViewPrivate::QGraphicsViewPrivate() (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+    n1: 76480 0x4D193D3: QGraphicsView::QGraphicsView(QWidget*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+     n1: 76480 0x11BD5C: Game::Game(QGraphicsView*) (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+      n1: 76480 0x11BFD6: Game::instance() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+       n0: 76480 0x115FEE: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+ n1: 100387 0x400D273: _dl_new_object (dl-object.c:89)
+  n1: 100387 0x4006E96: _dl_map_object_from_fd (dl-load.c:997)
+   n2: 100387 0x400A61A: _dl_map_object (dl-load.c:2236)
+    n1: 81706 0x400F504: openaux (dl-deps.c:64)
+     n1: 81706 0x5D8B8B7: _dl_catch_exception (dl-error-skeleton.c:208)
+      n1: 81706 0x400F952: _dl_map_object_deps (dl-deps.c:248)
+       n1: 81706 0x4015D9F: dl_open_worker (dl-open.c:571)
+        n1: 81706 0x5D8B8B7: _dl_catch_exception (dl-error-skeleton.c:208)
+         n1: 81706 0x40155F9: _dl_open (dl-open.c:837)
+          n1: 81706 0x665534B: dlopen_doit (dlopen.c:66)
+           n1: 81706 0x5D8B8B7: _dl_catch_exception (dl-error-skeleton.c:208)
+            n1: 81706 0x5D8B982: _dl_catch_error (dl-error-skeleton.c:227)
+             n1: 81706 0x6655B58: _dlerror_run (dlerror.c:170)
+              n1: 81706 0x66553D9: dlopen@@GLIBC_2.2.5 (dlopen.c:87)
+               n2: 81706 0x576369E: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+                n1: 80507 0x575CD1C: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+                 n1: 80507 0x575D2E6: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+                  n1: 80507 0x57538C7: QFactoryLoader::instance(int) const (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+                   n0: 80507 in 4 places, all below massif's threshold (1.00%)
+                n0: 1199 in 1 place, below massif's threshold (1.00%)
+    n0: 18681 in 1 place, below massif's threshold (1.00%)
+ n1: 72704 0x5AD0C19: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B89: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011C90: call_init (dl-init.c:30)
+    n1: 72704 0x4011C90: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n1: 65408 0x91EE009: ??? (in /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0)
+  n0: 65408 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=14
+#-----------
+time=224704855
+mem_heap_B=5887496
+mem_heap_extra_B=174120
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=229647021
+mem_heap_B=8167591
+mem_heap_extra_B=173865
+mem_stacks_B=0
+heap_tree=detailed
+n4: 8167591 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 7167256 0x50646AF: QImageData::create(QSize const&, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+  n2: 7167256 0x50647DE: QImage::QImage(QSize const&, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+   n1: 4718592 0x50CAACB: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+    n1: 4718592 0x50CC926: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+     n1: 4718592 0x508B73C: QImageReader::read(QImage*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+      n2: 4718592 0x508BEC8: QImageReader::read() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+       n1: 2359296 0x506423A: QImage::load(QString const&, char const*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n1: 2359296 0x11B9C9: Game::displayMainMenu() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+         n1: 2359296 0x11BD10: Game::reset() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+          n1: 2359296 0x11BE62: Game::Game(QGraphicsView*) (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+           n1: 2359296 0x11BFD6: Game::instance() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+            n0: 2359296 0x115FEE: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+       n1: 2359296 0x50A8300: QPlatformPixmap::fromFile(QString const&, char const*, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n2: 2359296 0x50A1B36: QPixmap::load(QString const&, char const*, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+         n1: 2359296 0x11BEC1: Game::Game(QGraphicsView*) (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+          n1: 2359296 0x11BFD6: Game::instance() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+           n0: 2359296 0x115FEE: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+         n0: 0 in 2 places, all below massif's threshold (1.00%)
+   n1: 2448664 0x506481C: QImage::QImage(int, int, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+    n1: 2448664 0x5067F05: QImage::convertToFormat_helper(QImage::Format, QFlags<Qt::ImageConversionFlag>) const (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+     n1: 2448664 0x50A9066: QRasterPlatformPixmap::createPixmapForImage(QImage, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+      n1: 2448664 0x50A935D: QRasterPlatformPixmap::fromImage(QImage const&, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+       n1: 2448664 0x50A8356: QPlatformPixmap::fromFile(QString const&, char const*, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n2: 2448664 0x50A1B36: QPixmap::load(QString const&, char const*, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+         n1: 2359296 0x11BEC1: Game::Game(QGraphicsView*) (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+          n1: 2359296 0x11BFD6: Game::instance() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+           n0: 2359296 0x115FEE: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+         n0: 89368 in 2 places, all below massif's threshold (1.00%)
+ n0: 726428 in 569 places, all below massif's threshold (1.00%)
+ n1: 173520 0x55AB240: QArrayData::allocate(unsigned long, unsigned long, unsigned long, QFlags<QArrayData::AllocationOption>) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+  n0: 173520 in 44 places, all below massif's threshold (1.00%)
+ n1: 100387 0x400D273: _dl_new_object (dl-object.c:89)
+  n1: 100387 0x4006E96: _dl_map_object_from_fd (dl-load.c:997)
+   n1: 100387 0x400A61A: _dl_map_object (dl-load.c:2236)
+    n0: 100387 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=16
+#-----------
+time=255938718
+mem_heap_B=230318024
+mem_heap_extra_B=175376
+mem_stacks_B=0
+heap_tree=detailed
+n2: 230318024 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 229127960 0x50646AF: QImageData::create(QSize const&, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+  n2: 229127960 0x50647DE: QImage::QImage(QSize const&, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+   n1: 226679296 0x50CAACB: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+    n1: 226679296 0x50CC926: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+     n1: 226679296 0x508B73C: QImageReader::read(QImage*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+      n2: 226679296 0x508BEC8: QImageReader::read() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+       n2: 226679296 0x506423A: QImage::load(QString const&, char const*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n1: 224320000 0x11CF09: LevelManager::load(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*, QGraphicsScene*) (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+         n1: 224320000 0x11AC6E: Game::start() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+          n0: 224320000 0x115FF9: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+        n1: 2359296 0x11B9C9: Game::displayMainMenu() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+         n1: 2359296 0x11BD10: Game::reset() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+          n1: 2359296 0x11BE62: Game::Game(QGraphicsView*) (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+           n1: 2359296 0x11BFD6: Game::instance() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+            n0: 2359296 0x115FEE: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+   n1: 2448664 0x506481C: QImage::QImage(int, int, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+    n1: 2448664 0x5067F05: QImage::convertToFormat_helper(QImage::Format, QFlags<Qt::ImageConversionFlag>) const (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+     n1: 2448664 0x50A9066: QRasterPlatformPixmap::createPixmapForImage(QImage, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+      n1: 2448664 0x50A935D: QRasterPlatformPixmap::fromImage(QImage const&, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+       n1: 2448664 0x50A8356: QPlatformPixmap::fromFile(QString const&, char const*, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n2: 2448664 0x50A1B36: QPixmap::load(QString const&, char const*, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+         n1: 2359296 0x11BEC1: Game::Game(QGraphicsView*) (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+          n1: 2359296 0x11BFD6: Game::instance() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+           n0: 2359296 0x115FEE: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+         n0: 89368 in 2 places, all below massif's threshold (1.00%)
+ n0: 1190064 in 572 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=17
+#-----------
+time=3146959682
+mem_heap_B=230273160
+mem_heap_extra_B=175368
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=3155907550
+mem_heap_B=228050975
+mem_heap_extra_B=181073
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=3168824216
+mem_heap_B=228276682
+mem_heap_extra_B=188150
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=3183604099
+mem_heap_B=228442193
+mem_heap_extra_B=195975
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=3196264800
+mem_heap_B=228571361
+mem_heap_extra_B=202751
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=3204706289
+mem_heap_B=228686300
+mem_heap_extra_B=207220
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=3220181389
+mem_heap_B=228837662
+mem_heap_extra_B=215490
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=3228620699
+mem_heap_B=228920049
+mem_heap_extra_B=219983
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=3239875925
+mem_heap_B=229029502
+mem_heap_extra_B=225954
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=3249778294
+mem_heap_B=229191133
+mem_heap_extra_B=231211
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=3262602693
+mem_heap_B=229315053
+mem_heap_extra_B=237963
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=3277565923
+mem_heap_B=229459686
+mem_heap_extra_B=245818
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=3292528288
+mem_heap_B=229616709
+mem_heap_extra_B=253867
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=3301078377
+mem_heap_B=229699807
+mem_heap_extra_B=258401
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=3309627402
+mem_heap_B=229813803
+mem_heap_extra_B=262797
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=3320810322
+mem_heap_B=230290525
+mem_heap_extra_B=266739
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=3329363004
+mem_heap_B=230545014
+mem_heap_extra_B=270442
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=3337910759
+mem_heap_B=230628172
+mem_heap_extra_B=274980
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=3346460087
+mem_heap_B=230711913
+mem_heap_extra_B=279567
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=3361420801
+mem_heap_B=230988531
+mem_heap_extra_B=287501
+mem_stacks_B=0
+heap_tree=detailed
+n2: 230988531 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 227620128 0x50646AF: QImageData::create(QSize const&, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+  n2: 227620128 0x50647DE: QImage::QImage(QSize const&, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+   n1: 224356864 0x50CAACB: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+    n1: 224356864 0x50CC926: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+     n1: 224356864 0x508B73C: QImageReader::read(QImage*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+      n2: 224356864 0x508BEC8: QImageReader::read() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+       n2: 224320000 0x506423A: QImage::load(QString const&, char const*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n1: 224320000 0x11CF09: LevelManager::load(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*, QGraphicsScene*) (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+         n1: 224320000 0x11AC6E: Game::start() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+          n0: 224320000 0x115FF9: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 36864 in 1 place, below massif's threshold (1.00%)
+   n2: 3263264 0x506481C: QImage::QImage(int, int, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+    n1: 3263264 0x5067F05: QImage::convertToFormat_helper(QImage::Format, QFlags<Qt::ImageConversionFlag>) const (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+     n1: 3263264 0x50A9066: QRasterPlatformPixmap::createPixmapForImage(QImage, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+      n1: 3263264 0x50A935D: QRasterPlatformPixmap::fromImage(QImage const&, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+       n1: 3263264 0x50A8356: QPlatformPixmap::fromFile(QString const&, char const*, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n2: 3263264 0x50A1B36: QPixmap::load(QString const&, char const*, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+         n1: 2359296 0x11BEC1: Game::Game(QGraphicsView*) (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+          n1: 2359296 0x11BFD6: Game::instance() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+           n0: 2359296 0x115FEE: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+         n0: 903968 in 49 places, all below massif's threshold (1.00%)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 3368403 in 593 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=37
+#-----------
+time=3369970892
+mem_heap_B=231071915
+mem_heap_extra_B=292013
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=3381231177
+mem_heap_B=231116322
+mem_heap_extra_B=297054
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=3394655269
+mem_heap_B=231359950
+mem_heap_extra_B=297778
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=3403514246
+mem_heap_B=231521556
+mem_heap_extra_B=298236
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=3411033449
+mem_heap_B=232224671
+mem_heap_extra_B=302681
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=3421541918
+mem_heap_B=232307739
+mem_heap_extra_B=307325
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=3430040828
+mem_heap_B=232307843
+mem_heap_extra_B=307277
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=3438537740
+mem_heap_B=232307971
+mem_heap_extra_B=307293
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=3447034108
+mem_heap_B=232307971
+mem_heap_extra_B=307293
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=3455530207
+mem_heap_B=232307971
+mem_heap_extra_B=307293
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=3464015632
+mem_heap_B=232307971
+mem_heap_extra_B=307293
+mem_stacks_B=0
+heap_tree=detailed
+n2: 232307971 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 228064440 0x50646AF: QImageData::create(QSize const&, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+  n2: 228064440 0x50647DE: QImage::QImage(QSize const&, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+   n1: 224356864 0x50CAACB: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+    n1: 224356864 0x50CC926: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+     n1: 224356864 0x508B73C: QImageReader::read(QImage*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+      n2: 224356864 0x508BEC8: QImageReader::read() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+       n2: 224320000 0x506423A: QImage::load(QString const&, char const*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n1: 224320000 0x11CF09: LevelManager::load(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*, QGraphicsScene*) (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+         n1: 224320000 0x11AC6E: Game::start() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+          n0: 224320000 0x115FF9: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 36864 in 1 place, below massif's threshold (1.00%)
+   n2: 3707576 0x506481C: QImage::QImage(int, int, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+    n1: 3707576 0x5067F05: QImage::convertToFormat_helper(QImage::Format, QFlags<Qt::ImageConversionFlag>) const (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+     n1: 3707576 0x50A9066: QRasterPlatformPixmap::createPixmapForImage(QImage, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+      n1: 3707576 0x50A935D: QRasterPlatformPixmap::fromImage(QImage const&, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+       n1: 3707576 0x50A8356: QPlatformPixmap::fromFile(QString const&, char const*, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n2: 3707576 0x50A1B36: QPixmap::load(QString const&, char const*, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+         n1: 2359296 0x11BEC1: Game::Game(QGraphicsView*) (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+          n1: 2359296 0x11BFD6: Game::instance() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+           n0: 2359296 0x115FEE: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+         n0: 1348280 in 61 places, all below massif's threshold (1.00%)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 4243531 in 597 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=48
+#-----------
+time=3472521397
+mem_heap_B=232310595
+mem_heap_extra_B=307453
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=3481023410
+mem_heap_B=232311619
+mem_heap_extra_B=307501
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=3483494955
+mem_heap_B=232312259
+mem_heap_extra_B=307549
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=3485705122
+mem_heap_B=232317379
+mem_heap_extra_B=307901
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=3489559795
+mem_heap_B=232317379
+mem_heap_extra_B=307901
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=3492030030
+mem_heap_B=232317379
+mem_heap_extra_B=307901
+mem_stacks_B=0
+heap_tree=detailed
+n2: 232317379 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 228064440 0x50646AF: QImageData::create(QSize const&, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+  n2: 228064440 0x50647DE: QImage::QImage(QSize const&, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+   n1: 224356864 0x50CAACB: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+    n1: 224356864 0x50CC926: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+     n1: 224356864 0x508B73C: QImageReader::read(QImage*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+      n2: 224356864 0x508BEC8: QImageReader::read() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+       n2: 224320000 0x506423A: QImage::load(QString const&, char const*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n1: 224320000 0x11CF09: LevelManager::load(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*, QGraphicsScene*) (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+         n1: 224320000 0x11AC6E: Game::start() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+          n0: 224320000 0x115FF9: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 36864 in 1 place, below massif's threshold (1.00%)
+   n2: 3707576 0x506481C: QImage::QImage(int, int, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+    n1: 3707576 0x5067F05: QImage::convertToFormat_helper(QImage::Format, QFlags<Qt::ImageConversionFlag>) const (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+     n1: 3707576 0x50A9066: QRasterPlatformPixmap::createPixmapForImage(QImage, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+      n1: 3707576 0x50A935D: QRasterPlatformPixmap::fromImage(QImage const&, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+       n1: 3707576 0x50A8356: QPlatformPixmap::fromFile(QString const&, char const*, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n2: 3707576 0x50A1B36: QPixmap::load(QString const&, char const*, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+         n1: 2359296 0x11BEC1: Game::Game(QGraphicsView*) (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+          n1: 2359296 0x11BFD6: Game::instance() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+           n0: 2359296 0x115FEE: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+         n0: 1348280 in 61 places, all below massif's threshold (1.00%)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 4252939 in 597 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=54
+#-----------
+time=3494224297
+mem_heap_B=232317379
+mem_heap_extra_B=307901
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=3500291987
+mem_heap_B=234720012
+mem_heap_extra_B=308276
+mem_stacks_B=0
+heap_tree=peak
+n2: 234720012 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 230423736 0x50646AF: QImageData::create(QSize const&, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+  n2: 230423736 0x50647DE: QImage::QImage(QSize const&, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+   n1: 226716160 0x50CAACB: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+    n1: 226716160 0x50CC926: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+     n1: 226716160 0x508B73C: QImageReader::read(QImage*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+      n2: 226716160 0x508BEC8: QImageReader::read() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+       n2: 224320000 0x506423A: QImage::load(QString const&, char const*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n1: 224320000 0x11CF09: LevelManager::load(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*, QGraphicsScene*) (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+         n1: 224320000 0x11AC6E: Game::start() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+          n0: 224320000 0x115FF9: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+       n1: 2396160 0x50A8300: QPlatformPixmap::fromFile(QString const&, char const*, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n2: 2396160 0x50A1B36: QPixmap::load(QString const&, char const*, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+         n1: 2359296 0x11B0F7: Game::gameover() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+          n0: 2359296 0x116014: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+         n0: 36864 in 36 places, all below massif's threshold (1.00%)
+   n2: 3707576 0x506481C: QImage::QImage(int, int, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+    n1: 3707576 0x5067F05: QImage::convertToFormat_helper(QImage::Format, QFlags<Qt::ImageConversionFlag>) const (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+     n1: 3707576 0x50A9066: QRasterPlatformPixmap::createPixmapForImage(QImage, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+      n1: 3707576 0x50A935D: QRasterPlatformPixmap::fromImage(QImage const&, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+       n1: 3707576 0x50A8356: QPlatformPixmap::fromFile(QString const&, char const*, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n2: 3707576 0x50A1B36: QPixmap::load(QString const&, char const*, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+         n1: 2359296 0x11BEC1: Game::Game(QGraphicsView*) (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+          n1: 2359296 0x11BFD6: Game::instance() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+           n0: 2359296 0x115FEE: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+         n0: 1348280 in 61 places, all below massif's threshold (1.00%)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 4296276 in 597 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=56
+#-----------
+time=3523544422
+mem_heap_B=234715404
+mem_heap_extra_B=308268
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=3528538819
+mem_heap_B=234639725
+mem_heap_extra_B=308019
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=3531661146
+mem_heap_B=234764151
+mem_heap_extra_B=308625
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=3533798602
+mem_heap_B=234472901
+mem_heap_extra_B=297795
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=3535936021
+mem_heap_B=234190181
+mem_heap_extra_B=282371
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=3538073611
+mem_heap_B=234030021
+mem_heap_extra_B=273635
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=3540217896
+mem_heap_B=233904181
+mem_heap_extra_B=266771
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=3542361156
+mem_heap_B=233797261
+mem_heap_extra_B=260939
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=3544503631
+mem_heap_B=233702661
+mem_heap_extra_B=255779
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=3546646681
+mem_heap_B=233616861
+mem_heap_extra_B=251099
+mem_stacks_B=0
+heap_tree=detailed
+n2: 233616861 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 230507256 0x50646AF: QImageData::create(QSize const&, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+  n2: 230507256 0x50647DE: QImage::QImage(QSize const&, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+   n1: 224356864 0x50CAACB: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+    n1: 224356864 0x50CC926: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+     n1: 224356864 0x508B73C: QImageReader::read(QImage*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+      n2: 224356864 0x508BEC8: QImageReader::read() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+       n2: 224320000 0x506423A: QImage::load(QString const&, char const*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n1: 224320000 0x11CF09: LevelManager::load(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*, QGraphicsScene*) (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+         n1: 224320000 0x11AC6E: Game::start() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+          n0: 224320000 0x115FF9: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 36864 in 1 place, below massif's threshold (1.00%)
+   n2: 6150392 0x506481C: QImage::QImage(int, int, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+    n1: 6150392 0x5067F05: QImage::convertToFormat_helper(QImage::Format, QFlags<Qt::ImageConversionFlag>) const (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+     n1: 6150392 0x50A9066: QRasterPlatformPixmap::createPixmapForImage(QImage, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+      n1: 6150392 0x50A935D: QRasterPlatformPixmap::fromImage(QImage const&, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+       n1: 6150392 0x50A8356: QPlatformPixmap::fromFile(QString const&, char const*, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n3: 6150392 0x50A1B36: QPixmap::load(QString const&, char const*, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+         n1: 2359296 0x11B0F7: Game::gameover() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+          n0: 2359296 0x116014: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+         n1: 2359296 0x11BEC1: Game::Game(QGraphicsView*) (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+          n1: 2359296 0x11BFD6: Game::instance() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+           n0: 2359296 0x115FEE: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+         n0: 1431800 in 61 places, all below massif's threshold (1.00%)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 3109605 in 599 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=66
+#-----------
+time=3548793631
+mem_heap_B=233537661
+mem_heap_extra_B=246779
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=3550930396
+mem_heap_B=233464181
+mem_heap_extra_B=242771
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=3553067313
+mem_heap_B=233390677
+mem_heap_extra_B=238755
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=3555209263
+mem_heap_B=233319997
+mem_heap_extra_B=234827
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=3557353108
+mem_heap_B=233257517
+mem_heap_extra_B=231403
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=3559500888
+mem_heap_B=233197677
+mem_heap_extra_B=228139
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=72
+#-----------
+time=3561640363
+mem_heap_B=233140477
+mem_heap_extra_B=225019
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=73
+#-----------
+time=3563777238
+mem_heap_B=233085477
+mem_heap_extra_B=222019
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=74
+#-----------
+time=3565920506
+mem_heap_B=233031397
+mem_heap_extra_B=219075
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=75
+#-----------
+time=3568063533
+mem_heap_B=232972933
+mem_heap_extra_B=215843
+mem_stacks_B=0
+heap_tree=detailed
+n2: 232972933 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 230507256 0x50646AF: QImageData::create(QSize const&, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+  n2: 230507256 0x50647DE: QImage::QImage(QSize const&, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+   n1: 224356864 0x50CAACB: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+    n1: 224356864 0x50CC926: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+     n1: 224356864 0x508B73C: QImageReader::read(QImage*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+      n2: 224356864 0x508BEC8: QImageReader::read() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+       n2: 224320000 0x506423A: QImage::load(QString const&, char const*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n1: 224320000 0x11CF09: LevelManager::load(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*, QGraphicsScene*) (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+         n1: 224320000 0x11AC6E: Game::start() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+          n0: 224320000 0x115FF9: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 36864 in 1 place, below massif's threshold (1.00%)
+   n2: 6150392 0x506481C: QImage::QImage(int, int, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+    n1: 6150392 0x5067F05: QImage::convertToFormat_helper(QImage::Format, QFlags<Qt::ImageConversionFlag>) const (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+     n1: 6150392 0x50A9066: QRasterPlatformPixmap::createPixmapForImage(QImage, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+      n1: 6150392 0x50A935D: QRasterPlatformPixmap::fromImage(QImage const&, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+       n1: 6150392 0x50A8356: QPlatformPixmap::fromFile(QString const&, char const*, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n3: 6150392 0x50A1B36: QPixmap::load(QString const&, char const*, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+         n1: 2359296 0x11B0F7: Game::gameover() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+          n0: 2359296 0x116014: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+         n1: 2359296 0x11BEC1: Game::Game(QGraphicsView*) (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+          n1: 2359296 0x11BFD6: Game::instance() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+           n0: 2359296 0x115FEE: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+         n0: 1431800 in 61 places, all below massif's threshold (1.00%)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 2465677 in 599 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=76
+#-----------
+time=3570217425
+mem_heap_B=232916709
+mem_heap_extra_B=212707
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=77
+#-----------
+time=3572357002
+mem_heap_B=232862677
+mem_heap_extra_B=209699
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=78
+#-----------
+time=3574495397
+mem_heap_B=232815597
+mem_heap_extra_B=207131
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=79
+#-----------
+time=3576649472
+mem_heap_B=232769397
+mem_heap_extra_B=204611
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=80
+#-----------
+time=3578794787
+mem_heap_B=232724517
+mem_heap_extra_B=202163
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=81
+#-----------
+time=3580948537
+mem_heap_B=232680517
+mem_heap_extra_B=199763
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=82
+#-----------
+time=3583085447
+mem_heap_B=232637837
+mem_heap_extra_B=197435
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=83
+#-----------
+time=3585223897
+mem_heap_B=232596037
+mem_heap_extra_B=195155
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=84
+#-----------
+time=3587361037
+mem_heap_B=232555117
+mem_heap_extra_B=192923
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=85
+#-----------
+time=3589517747
+mem_heap_B=232514637
+mem_heap_extra_B=190715
+mem_stacks_B=0
+heap_tree=detailed
+n2: 232514637 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 230507256 0x50646AF: QImageData::create(QSize const&, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+  n2: 230507256 0x50647DE: QImage::QImage(QSize const&, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+   n1: 224356864 0x50CAACB: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+    n1: 224356864 0x50CC926: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+     n1: 224356864 0x508B73C: QImageReader::read(QImage*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+      n2: 224356864 0x508BEC8: QImageReader::read() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+       n2: 224320000 0x506423A: QImage::load(QString const&, char const*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n1: 224320000 0x11CF09: LevelManager::load(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*, QGraphicsScene*) (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+         n1: 224320000 0x11AC6E: Game::start() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+          n0: 224320000 0x115FF9: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 36864 in 1 place, below massif's threshold (1.00%)
+   n2: 6150392 0x506481C: QImage::QImage(int, int, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+    n1: 6150392 0x5067F05: QImage::convertToFormat_helper(QImage::Format, QFlags<Qt::ImageConversionFlag>) const (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+     n1: 6150392 0x50A9066: QRasterPlatformPixmap::createPixmapForImage(QImage, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+      n1: 6150392 0x50A935D: QRasterPlatformPixmap::fromImage(QImage const&, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+       n1: 6150392 0x50A8356: QPlatformPixmap::fromFile(QString const&, char const*, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n3: 6150392 0x50A1B36: QPixmap::load(QString const&, char const*, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+         n1: 2359296 0x11B0F7: Game::gameover() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+          n0: 2359296 0x116014: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+         n1: 2359296 0x11BEC1: Game::Game(QGraphicsView*) (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+          n1: 2359296 0x11BFD6: Game::instance() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+           n0: 2359296 0x115FEE: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+         n0: 1431800 in 61 places, all below massif's threshold (1.00%)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 2007381 in 599 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=86
+#-----------
+time=3591668522
+mem_heap_B=232475037
+mem_heap_extra_B=188555
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=87
+#-----------
+time=3593810662
+mem_heap_B=232436317
+mem_heap_extra_B=186443
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=88
+#-----------
+time=3595947382
+mem_heap_B=675840
+mem_heap_extra_B=142496
+mem_stacks_B=0
+heap_tree=empty

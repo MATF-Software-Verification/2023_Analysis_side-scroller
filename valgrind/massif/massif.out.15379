@@ -1,0 +1,726 @@
+desc: --stacks=yes
+cmd: ../../28-side-scroller/build/side-scroller
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=60187272
+mem_heap_B=648617
+mem_heap_extra_B=153703
+mem_stacks_B=3008
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=110938008
+mem_heap_B=3401312
+mem_heap_extra_B=172368
+mem_stacks_B=3600
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=183288691
+mem_heap_B=3425264
+mem_heap_extra_B=172920
+mem_stacks_B=5304
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=229698589
+mem_heap_B=230144950
+mem_heap_extra_B=175394
+mem_stacks_B=3632
+heap_tree=detailed
+n2: 230144950 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 229127960 0x50646AF: QImageData::create(QSize const&, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+  n2: 229127960 0x50647DE: QImage::QImage(QSize const&, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+   n1: 226679296 0x50CAACB: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+    n1: 226679296 0x50CC926: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+     n1: 226679296 0x508B73C: QImageReader::read(QImage*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+      n2: 226679296 0x508BEC8: QImageReader::read() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+       n2: 226679296 0x506423A: QImage::load(QString const&, char const*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n1: 224320000 0x11CF09: LevelManager::load(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*, QGraphicsScene*) (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+         n1: 224320000 0x11AC6E: Game::start() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+          n0: 224320000 0x115FF9: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+        n1: 2359296 0x11B9C9: Game::displayMainMenu() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+         n1: 2359296 0x11BD10: Game::reset() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+          n1: 2359296 0x11BE62: Game::Game(QGraphicsView*) (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+           n1: 2359296 0x11BFD6: Game::instance() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+            n0: 2359296 0x115FEE: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+   n1: 2448664 0x506481C: QImage::QImage(int, int, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+    n1: 2448664 0x5067F05: QImage::convertToFormat_helper(QImage::Format, QFlags<Qt::ImageConversionFlag>) const (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+     n1: 2448664 0x50A9066: QRasterPlatformPixmap::createPixmapForImage(QImage, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+      n1: 2448664 0x50A935D: QRasterPlatformPixmap::fromImage(QImage const&, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+       n1: 2448664 0x50A8356: QPlatformPixmap::fromFile(QString const&, char const*, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n2: 2448664 0x50A1B36: QPixmap::load(QString const&, char const*, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+         n1: 2359296 0x11BEC1: Game::Game(QGraphicsView*) (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+          n1: 2359296 0x11BFD6: Game::instance() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+           n0: 2359296 0x115FEE: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+         n0: 89368 in 2 places, all below massif's threshold (1.00%)
+ n0: 1016990 in 572 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=5
+#-----------
+time=313548282
+mem_heap_B=230318040
+mem_heap_extra_B=175472
+mem_stacks_B=3592
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=369152517
+mem_heap_B=230318040
+mem_heap_extra_B=175472
+mem_stacks_B=3664
+heap_tree=detailed
+n2: 230318040 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 229127960 0x50646AF: QImageData::create(QSize const&, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+  n2: 229127960 0x50647DE: QImage::QImage(QSize const&, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+   n1: 226679296 0x50CAACB: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+    n1: 226679296 0x50CC926: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+     n1: 226679296 0x508B73C: QImageReader::read(QImage*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+      n2: 226679296 0x508BEC8: QImageReader::read() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+       n2: 226679296 0x506423A: QImage::load(QString const&, char const*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n1: 224320000 0x11CF09: LevelManager::load(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*, QGraphicsScene*) (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+         n1: 224320000 0x11AC6E: Game::start() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+          n0: 224320000 0x115FF9: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+        n1: 2359296 0x11B9C9: Game::displayMainMenu() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+         n1: 2359296 0x11BD10: Game::reset() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+          n1: 2359296 0x11BE62: Game::Game(QGraphicsView*) (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+           n1: 2359296 0x11BFD6: Game::instance() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+            n0: 2359296 0x115FEE: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+   n1: 2448664 0x506481C: QImage::QImage(int, int, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+    n1: 2448664 0x5067F05: QImage::convertToFormat_helper(QImage::Format, QFlags<Qt::ImageConversionFlag>) const (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+     n1: 2448664 0x50A9066: QRasterPlatformPixmap::createPixmapForImage(QImage, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+      n1: 2448664 0x50A935D: QRasterPlatformPixmap::fromImage(QImage const&, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+       n1: 2448664 0x50A8356: QPlatformPixmap::fromFile(QString const&, char const*, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n2: 2448664 0x50A1B36: QPixmap::load(QString const&, char const*, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+         n1: 2359296 0x11BEC1: Game::Game(QGraphicsView*) (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+          n1: 2359296 0x11BFD6: Game::instance() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+           n0: 2359296 0x115FEE: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+         n0: 89368 in 2 places, all below massif's threshold (1.00%)
+ n0: 1190080 in 572 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=7
+#-----------
+time=430328999
+mem_heap_B=230318040
+mem_heap_extra_B=175472
+mem_stacks_B=3592
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=487827185
+mem_heap_B=230318040
+mem_heap_extra_B=175472
+mem_stacks_B=4872
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=559231383
+mem_heap_B=230318040
+mem_heap_extra_B=175472
+mem_stacks_B=4872
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=621718728
+mem_heap_B=230318040
+mem_heap_extra_B=175472
+mem_stacks_B=4872
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=704754442
+mem_heap_B=230318040
+mem_heap_extra_B=175472
+mem_stacks_B=3592
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=767018449
+mem_heap_B=230318040
+mem_heap_extra_B=175472
+mem_stacks_B=3664
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=808457781
+mem_heap_B=230318040
+mem_heap_extra_B=175472
+mem_stacks_B=4864
+heap_tree=detailed
+n2: 230318040 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 229127960 0x50646AF: QImageData::create(QSize const&, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+  n2: 229127960 0x50647DE: QImage::QImage(QSize const&, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+   n1: 226679296 0x50CAACB: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+    n1: 226679296 0x50CC926: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+     n1: 226679296 0x508B73C: QImageReader::read(QImage*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+      n2: 226679296 0x508BEC8: QImageReader::read() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+       n2: 226679296 0x506423A: QImage::load(QString const&, char const*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n1: 224320000 0x11CF09: LevelManager::load(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*, QGraphicsScene*) (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+         n1: 224320000 0x11AC6E: Game::start() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+          n0: 224320000 0x115FF9: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+        n1: 2359296 0x11B9C9: Game::displayMainMenu() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+         n1: 2359296 0x11BD10: Game::reset() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+          n1: 2359296 0x11BE62: Game::Game(QGraphicsView*) (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+           n1: 2359296 0x11BFD6: Game::instance() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+            n0: 2359296 0x115FEE: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+   n1: 2448664 0x506481C: QImage::QImage(int, int, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+    n1: 2448664 0x5067F05: QImage::convertToFormat_helper(QImage::Format, QFlags<Qt::ImageConversionFlag>) const (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+     n1: 2448664 0x50A9066: QRasterPlatformPixmap::createPixmapForImage(QImage, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+      n1: 2448664 0x50A935D: QRasterPlatformPixmap::fromImage(QImage const&, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+       n1: 2448664 0x50A8356: QPlatformPixmap::fromFile(QString const&, char const*, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n2: 2448664 0x50A1B36: QPixmap::load(QString const&, char const*, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+         n1: 2359296 0x11BEC1: Game::Game(QGraphicsView*) (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+          n1: 2359296 0x11BFD6: Game::instance() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+           n0: 2359296 0x115FEE: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+         n0: 89368 in 2 places, all below massif's threshold (1.00%)
+ n0: 1190080 in 572 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=14
+#-----------
+time=864020967
+mem_heap_B=230318040
+mem_heap_extra_B=175472
+mem_stacks_B=4864
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=920049006
+mem_heap_B=230318040
+mem_heap_extra_B=175472
+mem_stacks_B=4816
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=1004270334
+mem_heap_B=230318040
+mem_heap_extra_B=175472
+mem_stacks_B=4864
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=1074428437
+mem_heap_B=230318040
+mem_heap_extra_B=175472
+mem_stacks_B=4864
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=1116484195
+mem_heap_B=230318040
+mem_heap_extra_B=175472
+mem_stacks_B=4864
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=1179612731
+mem_heap_B=230318040
+mem_heap_extra_B=175472
+mem_stacks_B=3616
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=1221636949
+mem_heap_B=230318040
+mem_heap_extra_B=175472
+mem_stacks_B=3592
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=1291733134
+mem_heap_B=230318040
+mem_heap_extra_B=175472
+mem_stacks_B=3592
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=1347701325
+mem_heap_B=230318040
+mem_heap_extra_B=175472
+mem_stacks_B=4864
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=1417767451
+mem_heap_B=230318040
+mem_heap_extra_B=175472
+mem_stacks_B=4872
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=1473689352
+mem_heap_B=230318040
+mem_heap_extra_B=175472
+mem_stacks_B=3536
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=1557915142
+mem_heap_B=230318040
+mem_heap_extra_B=175472
+mem_stacks_B=4872
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=1628000056
+mem_heap_B=230318040
+mem_heap_extra_B=175472
+mem_stacks_B=3592
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=1684089145
+mem_heap_B=230318040
+mem_heap_extra_B=175472
+mem_stacks_B=3592
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=1726103832
+mem_heap_B=230318040
+mem_heap_extra_B=175472
+mem_stacks_B=3664
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=1782184200
+mem_heap_B=230318040
+mem_heap_extra_B=175472
+mem_stacks_B=3664
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=1852229211
+mem_heap_B=230318040
+mem_heap_extra_B=175472
+mem_stacks_B=4864
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=1908306645
+mem_heap_B=230318040
+mem_heap_extra_B=175472
+mem_stacks_B=4864
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=1977464602
+mem_heap_B=230318040
+mem_heap_extra_B=175472
+mem_stacks_B=3536
+heap_tree=detailed
+n2: 230318040 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 229127960 0x50646AF: QImageData::create(QSize const&, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+  n2: 229127960 0x50647DE: QImage::QImage(QSize const&, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+   n1: 226679296 0x50CAACB: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+    n1: 226679296 0x50CC926: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+     n1: 226679296 0x508B73C: QImageReader::read(QImage*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+      n2: 226679296 0x508BEC8: QImageReader::read() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+       n2: 226679296 0x506423A: QImage::load(QString const&, char const*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n1: 224320000 0x11CF09: LevelManager::load(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*, QGraphicsScene*) (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+         n1: 224320000 0x11AC6E: Game::start() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+          n0: 224320000 0x115FF9: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+        n1: 2359296 0x11B9C9: Game::displayMainMenu() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+         n1: 2359296 0x11BD10: Game::reset() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+          n1: 2359296 0x11BE62: Game::Game(QGraphicsView*) (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+           n1: 2359296 0x11BFD6: Game::instance() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+            n0: 2359296 0x115FEE: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+   n1: 2448664 0x506481C: QImage::QImage(int, int, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+    n1: 2448664 0x5067F05: QImage::convertToFormat_helper(QImage::Format, QFlags<Qt::ImageConversionFlag>) const (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+     n1: 2448664 0x50A9066: QRasterPlatformPixmap::createPixmapForImage(QImage, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+      n1: 2448664 0x50A935D: QRasterPlatformPixmap::fromImage(QImage const&, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+       n1: 2448664 0x50A8356: QPlatformPixmap::fromFile(QString const&, char const*, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n2: 2448664 0x50A1B36: QPixmap::load(QString const&, char const*, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+         n1: 2359296 0x11BEC1: Game::Game(QGraphicsView*) (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+          n1: 2359296 0x11BFD6: Game::instance() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+           n0: 2359296 0x115FEE: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+         n0: 89368 in 2 places, all below massif's threshold (1.00%)
+ n0: 1190080 in 572 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=33
+#-----------
+time=2023643484
+mem_heap_B=230318040
+mem_heap_extra_B=175472
+mem_stacks_B=4864
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=2115855275
+mem_heap_B=230318040
+mem_heap_extra_B=175472
+mem_stacks_B=3616
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=2162031332
+mem_heap_B=230318040
+mem_heap_extra_B=175472
+mem_stacks_B=3592
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=2231195398
+mem_heap_B=230318040
+mem_heap_extra_B=175472
+mem_stacks_B=3616
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=2277369714
+mem_heap_B=230318040
+mem_heap_extra_B=175472
+mem_stacks_B=3592
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=2346606702
+mem_heap_B=230318040
+mem_heap_extra_B=175472
+mem_stacks_B=4872
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=2392717043
+mem_heap_B=230318040
+mem_heap_extra_B=175472
+mem_stacks_B=3616
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=2484995199
+mem_heap_B=230318040
+mem_heap_extra_B=175472
+mem_stacks_B=3664
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=2531176794
+mem_heap_B=230318040
+mem_heap_extra_B=175472
+mem_stacks_B=4864
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=2577285952
+mem_heap_B=230318040
+mem_heap_extra_B=175472
+mem_stacks_B=4816
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=2669557063
+mem_heap_B=230318040
+mem_heap_extra_B=175472
+mem_stacks_B=3592
+heap_tree=detailed
+n2: 230318040 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 229127960 0x50646AF: QImageData::create(QSize const&, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+  n2: 229127960 0x50647DE: QImage::QImage(QSize const&, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+   n1: 226679296 0x50CAACB: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+    n1: 226679296 0x50CC926: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+     n1: 226679296 0x508B73C: QImageReader::read(QImage*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+      n2: 226679296 0x508BEC8: QImageReader::read() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+       n2: 226679296 0x506423A: QImage::load(QString const&, char const*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n1: 224320000 0x11CF09: LevelManager::load(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*, QGraphicsScene*) (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+         n1: 224320000 0x11AC6E: Game::start() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+          n0: 224320000 0x115FF9: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+        n1: 2359296 0x11B9C9: Game::displayMainMenu() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+         n1: 2359296 0x11BD10: Game::reset() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+          n1: 2359296 0x11BE62: Game::Game(QGraphicsView*) (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+           n1: 2359296 0x11BFD6: Game::instance() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+            n0: 2359296 0x115FEE: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+   n1: 2448664 0x506481C: QImage::QImage(int, int, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+    n1: 2448664 0x5067F05: QImage::convertToFormat_helper(QImage::Format, QFlags<Qt::ImageConversionFlag>) const (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+     n1: 2448664 0x50A9066: QRasterPlatformPixmap::createPixmapForImage(QImage, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+      n1: 2448664 0x50A935D: QRasterPlatformPixmap::fromImage(QImage const&, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+       n1: 2448664 0x50A8356: QPlatformPixmap::fromFile(QString const&, char const*, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n2: 2448664 0x50A1B36: QPixmap::load(QString const&, char const*, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+         n1: 2359296 0x11BEC1: Game::Game(QGraphicsView*) (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+          n1: 2359296 0x11BFD6: Game::instance() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+           n0: 2359296 0x115FEE: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+         n0: 89368 in 2 places, all below massif's threshold (1.00%)
+ n0: 1190080 in 572 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=44
+#-----------
+time=2738793835
+mem_heap_B=230318040
+mem_heap_extra_B=175472
+mem_stacks_B=4872
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=2784939509
+mem_heap_B=230318040
+mem_heap_extra_B=175472
+mem_stacks_B=3616
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=2854169283
+mem_heap_B=230318040
+mem_heap_extra_B=175472
+mem_stacks_B=4816
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=2946436929
+mem_heap_B=230318040
+mem_heap_extra_B=175472
+mem_stacks_B=3592
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=3015673131
+mem_heap_B=230318040
+mem_heap_extra_B=175472
+mem_stacks_B=4872
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=3061799333
+mem_heap_B=230318040
+mem_heap_extra_B=175472
+mem_stacks_B=3616
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=3103299156
+mem_heap_B=230318040
+mem_heap_extra_B=175472
+mem_stacks_B=3592
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=3144834539
+mem_heap_B=230318040
+mem_heap_extra_B=175472
+mem_stacks_B=3592
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=3186273960
+mem_heap_B=228466253
+mem_heap_extra_B=197579
+mem_stacks_B=3376
+heap_tree=detailed
+n2: 228466253 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 227006784 0x50646AF: QImageData::create(QSize const&, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+  n2: 227006784 0x50647DE: QImage::QImage(QSize const&, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+   n1: 224344576 0x50CAACB: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+    n1: 224344576 0x50CC926: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+     n1: 224344576 0x508B73C: QImageReader::read(QImage*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+      n2: 224344576 0x508BEC8: QImageReader::read() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+       n2: 224320000 0x506423A: QImage::load(QString const&, char const*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n1: 224320000 0x11CF09: LevelManager::load(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*, QGraphicsScene*) (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+         n1: 224320000 0x11AC6E: Game::start() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+          n0: 224320000 0x115FF9: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 24576 in 1 place, below massif's threshold (1.00%)
+   n2: 2662208 0x506481C: QImage::QImage(int, int, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+    n1: 2662208 0x5067F05: QImage::convertToFormat_helper(QImage::Format, QFlags<Qt::ImageConversionFlag>) const (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+     n1: 2662208 0x50A9066: QRasterPlatformPixmap::createPixmapForImage(QImage, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+      n1: 2662208 0x50A935D: QRasterPlatformPixmap::fromImage(QImage const&, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+       n1: 2662208 0x50A8356: QPlatformPixmap::fromFile(QString const&, char const*, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n2: 2662208 0x50A1B36: QPixmap::load(QString const&, char const*, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+         n1: 2359296 0x11BEC1: Game::Game(QGraphicsView*) (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+          n1: 2359296 0x11BFD6: Game::instance() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+           n0: 2359296 0x115FEE: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+         n0: 302912 in 38 places, all below massif's threshold (1.00%)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 1459469 in 588 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=53
+#-----------
+time=3227713324
+mem_heap_B=228906865
+mem_heap_extra_B=219567
+mem_stacks_B=2776
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=3269152671
+mem_heap_B=229371411
+mem_heap_extra_B=241293
+mem_stacks_B=2432
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=3310592014
+mem_heap_B=229813981
+mem_heap_extra_B=263195
+mem_stacks_B=3000
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=3352031360
+mem_heap_B=230885115
+mem_heap_extra_B=282269
+mem_stacks_B=2440
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=3393490914
+mem_heap_B=231319998
+mem_heap_extra_B=298026
+mem_stacks_B=3992
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=3419589367
+mem_heap_B=232320938
+mem_heap_extra_B=308214
+mem_stacks_B=3440
+heap_tree=detailed
+n2: 232320938 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 228059424 0x50646AF: QImageData::create(QSize const&, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+  n2: 228059424 0x50647DE: QImage::QImage(QSize const&, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+   n1: 224356864 0x50CAACB: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+    n1: 224356864 0x50CC926: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+     n1: 224356864 0x508B73C: QImageReader::read(QImage*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+      n2: 224356864 0x508BEC8: QImageReader::read() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+       n2: 224320000 0x506423A: QImage::load(QString const&, char const*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n1: 224320000 0x11CF09: LevelManager::load(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*, QGraphicsScene*) (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+         n1: 224320000 0x11AC6E: Game::start() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+          n0: 224320000 0x115FF9: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 36864 in 1 place, below massif's threshold (1.00%)
+   n2: 3702560 0x506481C: QImage::QImage(int, int, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+    n1: 3702560 0x5067F05: QImage::convertToFormat_helper(QImage::Format, QFlags<Qt::ImageConversionFlag>) const (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+     n1: 3702560 0x50A9066: QRasterPlatformPixmap::createPixmapForImage(QImage, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+      n1: 3702560 0x50A935D: QRasterPlatformPixmap::fromImage(QImage const&, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+       n1: 3702560 0x50A8356: QPlatformPixmap::fromFile(QString const&, char const*, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n2: 3702560 0x50A1B36: QPixmap::load(QString const&, char const*, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+         n1: 2359296 0x11BEC1: Game::Game(QGraphicsView*) (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+          n1: 2359296 0x11BFD6: Game::instance() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+           n0: 2359296 0x115FEE: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+         n0: 1343264 in 60 places, all below massif's threshold (1.00%)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 4261514 in 597 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=59
+#-----------
+time=3461028702
+mem_heap_B=232307955
+mem_heap_extra_B=307637
+mem_stacks_B=1872
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=3496362444
+mem_heap_B=234659002
+mem_heap_extra_B=308550
+mem_stacks_B=3680
+heap_tree=peak
+n2: 234659002 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 230423736 0x50646AF: QImageData::create(QSize const&, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+  n2: 230423736 0x50647DE: QImage::QImage(QSize const&, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+   n1: 226716160 0x50CAACB: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+    n1: 226716160 0x50CC926: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+     n1: 226716160 0x508B73C: QImageReader::read(QImage*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+      n2: 226716160 0x508BEC8: QImageReader::read() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+       n2: 224320000 0x506423A: QImage::load(QString const&, char const*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n1: 224320000 0x11CF09: LevelManager::load(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*, QGraphicsScene*) (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+         n1: 224320000 0x11AC6E: Game::start() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+          n0: 224320000 0x115FF9: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+       n1: 2396160 0x50A8300: QPlatformPixmap::fromFile(QString const&, char const*, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n2: 2396160 0x50A1B36: QPixmap::load(QString const&, char const*, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+         n1: 2359296 0x11B0F7: Game::gameover() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+          n0: 2359296 0x116014: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+         n0: 36864 in 36 places, all below massif's threshold (1.00%)
+   n2: 3707576 0x506481C: QImage::QImage(int, int, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+    n1: 3707576 0x5067F05: QImage::convertToFormat_helper(QImage::Format, QFlags<Qt::ImageConversionFlag>) const (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+     n1: 3707576 0x50A9066: QRasterPlatformPixmap::createPixmapForImage(QImage, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+      n1: 3707576 0x50A935D: QRasterPlatformPixmap::fromImage(QImage const&, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+       n1: 3707576 0x50A8356: QPlatformPixmap::fromFile(QString const&, char const*, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+        n2: 3707576 0x50A1B36: QPixmap::load(QString const&, char const*, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+         n1: 2359296 0x11BEC1: Game::Game(QGraphicsView*) (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+          n1: 2359296 0x11BFD6: Game::instance() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+           n0: 2359296 0x115FEE: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
+         n0: 1348280 in 61 places, all below massif's threshold (1.00%)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 4235266 in 597 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=61
+#-----------
+time=3537802603
+mem_heap_B=234151013
+mem_heap_extra_B=280635
+mem_stacks_B=1992
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=3579241956
+mem_heap_B=232744333
+mem_heap_extra_B=203563
+mem_stacks_B=1936
+heap_tree=empty
