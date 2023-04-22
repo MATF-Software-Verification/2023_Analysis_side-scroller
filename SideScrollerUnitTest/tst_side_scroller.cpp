@@ -6,7 +6,10 @@
 #include <../28-side-scroller/side-scroller/Game.h>
 #include <../28-side-scroller/side-scroller/Player.h>
 #include <../28-side-scroller/side-scroller/Entity.h>
+#include <../28-side-scroller/side-scroller/Enemy.h>
 #include <../28-side-scroller/side-scroller/LevelManager.h>
+#include <../28-side-scroller/side-scroller/EnemyPickman.h>
+
 #include <iostream>
 
 class side_scroller : public QObject
@@ -54,6 +57,16 @@ private slots:
     void testIfSpeedIsDoubledWhenRunning();
     // ako je krenuo skok, da li je postavljena promenljiva jumping na true
     void testIfJumpingIsSetToTrueWhenThePlayerStartsJumping();
+
+    // Enemy
+    // ako se Enemy pomerio u desno, nova pozicija bi trebala > od stare (svi imaju isti metod, tako da samo 1 proizovljan)
+    void testIfWhenEnemyMovesToTheRightItsXValueIsGreater();
+    // ista stvar kao gore
+    void testIfWhenEnemyMovesToTheLeftItsXValueIsLesser();
+    // kad se spawn neprijatelj, on ce falling podrazumevano, da li mu je y manje?
+    void testIfWhenEnemySpawnsHeIsFallingAndHisYIsGreaterThanBefore();
+    // kad neprijatelj skace, y se povecava
+    void testIfWhenEnemyJumpsHisYIsLesserThanBefore();
 
 };
 
@@ -221,6 +234,77 @@ void side_scroller::testIfJumpingIsSetToTrueWhenThePlayerStartsJumping() {
 
     QCOMPARE(current_player->getJumping(), true);
     delete current_player;
+
+}
+
+
+// Enemy
+void side_scroller::testIfWhenEnemyMovesToTheRightItsXValueIsGreater() {
+
+    Enemy* current_enemy = (Enemy*) new EnemyPickman();
+    current_enemy->setDirection(RIGHT);
+
+    int old_x_value = current_enemy->x();
+
+    // za testiranje nam je potreban i player, zato pokrecemo funkciju start
+    Game::instance()->start();
+
+    current_enemy->setMoving(true);
+    current_enemy->advance();
+
+    QVERIFY(current_enemy->x() > old_x_value);
+    delete current_enemy;
+    Game::instance()->reset();
+}
+
+// Enemy
+void side_scroller::testIfWhenEnemyMovesToTheLeftItsXValueIsLesser() {
+
+    Enemy* current_enemy = (Enemy*) new EnemyPickman();
+
+    current_enemy->setX(1000);
+
+    int old_x_value = current_enemy->x();
+    Game::instance()->start();
+
+    current_enemy->setMoving(true);
+    current_enemy->setDirection(LEFT);
+    current_enemy->advance();
+
+    QVERIFY(current_enemy->x() < old_x_value);
+    delete current_enemy;
+    Game::instance()->reset();
+}
+
+void side_scroller::testIfWhenEnemySpawnsHeIsFallingAndHisYIsGreaterThanBefore() {
+
+    Enemy* current_enemy = (Enemy*) new EnemyPickman();
+
+    int old_y_value = current_enemy->y();
+    Game::instance()->start();
+    current_enemy->advance();
+
+    QVERIFY(current_enemy->y() > old_y_value);
+    delete current_enemy;
+    Game::instance()->reset();
+
+}
+
+void side_scroller::testIfWhenEnemyJumpsHisYIsLesserThanBefore() {
+
+    Enemy* current_enemy = (Enemy*) new EnemyPickman();
+
+    current_enemy->setY(1000);
+    current_enemy->setFalling(false);
+    current_enemy->setJumping(true);
+
+    int old_y_value = current_enemy->y();
+    Game::instance()->start();
+    current_enemy->advance();
+
+    QVERIFY(current_enemy->y() < old_y_value);
+    delete current_enemy;
+    Game::instance()->reset();
 
 }
 
