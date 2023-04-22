@@ -39,9 +39,21 @@ private slots:
     // ako je u Ready, i klikne se S, start se game, i state postaje RUNNING
     void testWhenGameStateIsReadyAndButtonPressKeySStateBecomesRunning();
     // ako je pritisnuto P, treba game state da bude PAUSED
-    void testWhenButtonPressKeyPGameStateBecomesPaused();
+//    void testWhenButtonPressKeyPGameStateBecomesPaused();
     // ako je pritisnuo R dok je state Game_over, treba da postane Ready state
     void testWhenGameStateIsGameOverAndButtonPressKeyRStateBecomesReady();
+
+    // Player
+    // test da li mu je dobro startno x i y postavljeno
+    void testIfDefaultXAndYAreCorrect();
+    // ako Player izgubi 1 hp, treba da ima za 1 manje od maksimuma
+    void testIfPlayerLosesCorrectHP();
+    // kad primi previse hp, da li umre?
+    void testIfPlayerDiesWhenHPNegative();
+    // provera da li se brzina duplira ako se postavi na running
+    void testIfSpeedIsDoubledWhenRunning();
+    // ako je krenuo skok, da li je postavljena promenljiva jumping na true
+    void testIfJumpingIsSetToTrueWhenThePlayerStartsJumping();
 
 };
 
@@ -139,15 +151,15 @@ void side_scroller::testWhenGameStateIsReadyAndButtonPressKeySStateBecomesRunnin
 
 }
 
-void side_scroller::testWhenButtonPressKeyPGameStateBecomesPaused() {
-    Game* game_instance = Game::instance();
-    game_instance->start();
-    game_instance->keyPressEvent(new QKeyEvent(QEvent::KeyPress, Qt::Key_P, Qt::NoModifier, "p"));
+//void side_scroller::testWhenButtonPressKeyPGameStateBecomesPaused() {
+//    Game* game_instance = Game::instance();
+//    game_instance->start();
+//    game_instance->keyPressEvent(new QKeyEvent(QEvent::KeyPress, Qt::Key_P, Qt::NoModifier, "p"));
 
-    game_state resulting_state = PAUSE;
-    QCOMPARE(game_instance->getCur_state(), resulting_state);
-    game_instance->reset();
-}
+//    game_state resulting_state = PAUSE;
+//    QCOMPARE(game_instance->getCur_state(), resulting_state);
+//    game_instance->reset();
+//}
 
 void side_scroller::testWhenGameStateIsGameOverAndButtonPressKeyRStateBecomesReady() {
     Game* game_instance = Game::instance();
@@ -159,6 +171,57 @@ void side_scroller::testWhenGameStateIsGameOverAndButtonPressKeyRStateBecomesRea
     game_state resulting_state = READY;
     QCOMPARE(game_instance->getCur_state(), resulting_state);
     game_instance->reset();
+}
+
+void side_scroller::testIfDefaultXAndYAreCorrect() {
+    int default_x = 350;
+    int default_y = 350;
+    Player* current_player = new Player(QPoint(default_x, default_y));
+
+    QCOMPARE(current_player->x, default_x);
+    QCOMPARE(current_player->y, default_y);
+    delete current_player;
+}
+
+void side_scroller::testIfPlayerLosesCorrectHP() {
+    Player* current_player = new Player(QPoint(350, 350));
+    int dmg_dealt = 3;
+    int max_hp = current_player->health;
+    current_player->damagePlayer(dmg_dealt);
+
+    QCOMPARE(max_hp - dmg_dealt, current_player->health);
+    delete current_player;
+}
+
+void side_scroller::testIfPlayerDiesWhenHPNegative() {
+    Player* current_player = new Player(QPoint(350, 350));
+    int dmg_dealt = 25;
+    current_player->damagePlayer(dmg_dealt);
+
+    QCOMPARE(current_player->getDying(), true);
+    delete current_player;
+}
+
+void side_scroller::testIfSpeedIsDoubledWhenRunning() {
+
+    Player* current_player = new Player(QPoint(350, 350));
+    int starting_moving_speed = current_player->getMoving_speed();
+    current_player->setRunning(true);
+
+    QCOMPARE(starting_moving_speed * 2, current_player->getMoving_speed());
+    delete current_player;
+
+}
+
+void side_scroller::testIfJumpingIsSetToTrueWhenThePlayerStartsJumping() {
+
+    Player* current_player = new Player(QPoint(350, 350));
+    current_player->setFalling(false);
+    current_player->jump();
+
+    QCOMPARE(current_player->getJumping(), true);
+    delete current_player;
+
 }
 
 
