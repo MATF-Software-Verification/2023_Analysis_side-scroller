@@ -63,3 +63,8 @@ HEADERS += \
     ../28-side-scroller/side-scroller/Rocket.h \
     ../28-side-scroller/side-scroller/SniperJoeBullet.h \
     ../28-side-scroller/side-scroller/Utils.h
+
+
+RESOURCES += \
+    ../28-side-scroller/side-scroller/res.qrc
+
