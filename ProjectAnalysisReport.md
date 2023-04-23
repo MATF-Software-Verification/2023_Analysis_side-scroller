@@ -372,8 +372,47 @@ Number of snapshots: 63
 
 - **Zaključak**: Kod za koji su napisani testovi je dobrog kvaliteta!
 
-## 
+## Code Coverage - gcov
 
+- Alat *gcov* koristi se za merenje pokrivenosti koda testovima, i koristimo ga nad projektom *SideScroller*. 
+
+- Pošto je za build system korišćen *qmake*, potrebno je dodati sledeće linije u .pro fajl:
+
+```
+QMAKE_CXXFLAGS += --coverage 
+QMAKE_LFLAGS += --coverage
+```
+
+- Nakon build-a, dobijamo dodatne *.gcno* fajlove, koji se koriste za generisanje samog izveštaja.
+
+- Pokrećeno izvršni fajl projekta, i čim se on završi, i sledeću komandu: 
+
+  ```
+  lcov --capture --directory . --output-file report.info
+  ```
+
+- Od prethodne komande smo dobili *report.info* fajl, koji nije toliko čitljiv za ljude. Zato pozivamo sledeću liniju:
+  ```
+  genhtml -o result report.info
+  ```
+  Koja će nam izgenerisati *.html* fajl, koji nam prikazuje tačno koliko je koda pokriveno testovima.
+
+- Pokretanjem prethodne komande, dobijamo sledeći izlaz:
+  ![image](./pictures/codecov1.png)
+  ![image](./pictures/codecov2.png)
+  Tj. odmah u terminalu možemo da vidimo osnovnu statistiku. Naime, *pokrivenost linija koda* je **72.9%**, dok je *pokrivenost funkcija* **66.9%**.  
+
+- Ako otvorimo *index.html*, fajl koji je bio izgenerisan prethodnom komandom, u browser-u, možemo da vidimo sledeće:
+  ![image](./pictures/lcov_1.png)
+
+  Tj. tačnu statistiku koliko je koji deo koda prekriven testovima. Nama je najviše od interesa koliko smo testirali sam side-scroller, što ispadne **72.6%** *pokrivenost linija koda*, i **62.5%** *pokrivenost funkcija*. Te brojke nisu za pohvalu, trebale bi da budu obe cifre oko **90%**, ali, treba uzeti u obzir da je sa 20 unit testova podignuta pokrivenost na ovoliko veliki procenat.
+
+  Ako uđemo u pokrivenost samo side-scrollera, vidimo sledeće:
+  ![image](./pictures/lcov_2.png)
+
+  Dati prikaz se poklapa sa unit testovima koje smo pisali. Naime, ako pogledamo pokrivenost testovima klasu *Rocket*, vidimo da ona uopšte nije testirana, što i ima smisla, pošto nismo pisali testove za zadatu klasu, i testovi koji su bili napisani, nisu imali veze sa tom klasom. Dok npr. klasa *EnemySniperJoe* ima pokrivenost koda od **91.7%** i pokrivenost funkcija **100%**, zato što dok smo pisali testove za *Enemy* klasu, instancirali smo tu objekat te klase. Klasa za koju smo najviše pisali testove, *Game*, ima relativno malu pokrivenost, **69.4%** pokrivenost koda, i **60%** prekrivenost funkcija, ali, treba uzeti u obzira da je klasa Game najveća klasa celog projekta, i da bi zahtevala veliki broj testova da bi se pokrila do kraja. 
+
+- **Zaključak**: Sa unit testovima koji su napisani nismo postigli ciljanu pokrivenost koda, ali, podigli smo je na vrlo visok nivo. Daljom nadogradnjom, i pisanjem još testova, pokrivenost će se podići! 
 
 
 
