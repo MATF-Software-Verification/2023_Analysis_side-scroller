@@ -264,6 +264,116 @@ Number of snapshots: 63
 
 - **Zaključak**: Hip se relativno odgovorno koristi. Jeste da postoji veliki skok do 224MB, ali to je posledica same prirode programa, i kad se dospe do te velike potrošnje, retko se diže ili spušta.
 
+## Unit testing - QtTest
+
+- Napravljen je specijalan projekat u okruženju *QtCreator*, gde će se nalaziti naši **unit testovi** za projekat *SideScroller*.
+
+- Klase za koje su pisani unit testovi:
+  - Game
+  - Player
+  - Enemy
+
+- Testovi koji su bili napisani za klasu **Game**: 
+    - void **testIfGameIsSingleInstance()** 
+      - Testira da li je moguće da imamo dve instance klase Game (ne bi trebalo da je moguće, jer se koristi *Singleton design pattern*).
+    - void **testIfGameStateIsReadyAtTheBegining**()
+      - Testira da li je atribut klase Game *cur_state* na početku izvršavanja jednak **READY**.
+    - void **testIfGameStateIsRunningWhenGameStarts**()
+      - Testira da li je atribut *cur_state* klase Game jednak **RUNNING** kada je pokrenut metod *start()*.
+    - void **testIfWhenGameStartsPlayerIsInitialised**()
+      - Testira da li je atribut *player* klase Game inicijalizovan kad je pokrenut metod *start()*.
+    - void **testWhenGameIsInMainMenuThereAre3Buttons**()
+      - Testira da li kad je pokrenut metod *displayMainMenu()* klase Game su prikazana 3 dugmeta.
+    - void **testWhenPlayerDiesStateIsGameOver**()
+      - Testira da li kad atribut *player* klase Game pozove sopstven metod *die()*, da je atribut klase Game *cur_state* jednak **GAME_OVER**.
+    - void **testWhenTogglePauseGameStateIsPause**()
+      - Testira da li kad se pozove metod *tooglePause()* klase Game, da atribut *cur_state* postane **PAUSE**.
+      - Treba napomenuti da postoji štamparska greška u imenu metoda. Naime, trebalo bi da se metod zove *togglePause()*.
+    - void **testWhenGameStateIsReadyAndButtonPressKeySStateBecomesRunning**()
+      - Testira da li kad je atribut klase Game *cur_state* jednak **READY** i pritisne se dugme **S**, *cur_state* postaje **RUNNING**.
+    - void **testWhenGameStateIsGameOverAndButtonPressKeyRStateBecomesReady** ()
+      - Testira da li kad je atribut klase Game *cur_state* jednak **GAME_OVER** i pritisne se dugme **R**, *cur_state* postaje **READY**.
+    
+- Testovi koji su bili napisani za klasu **Player**: 
+   
+    - void **testIfDefaultXAndYAreCorrect**()
+      - Testira da li kad se konstruiše objekat klase Player, da li se postavlja na korektno mesto (tj. da li su mu dobro postavljene *x* i *y* kordinate).
+    - void **testIfPlayerLosesCorrectHP**()
+      - Testira da li kad se pozove metod *damagePlayer()* klase Player, da li se igraču smanji atribut *health* za toliko.
+    - void **testIfPlayerDiesWhenHPNegative**()
+      - Testira da li kad atribut *health* klase Player postane <= 0, da li atribut *dying* postaje **true**.
+    - void **testIfSpeedIsDoubledWhenRunning**()
+      - Testira da li kad se postavi vrednost atributa *running* klase Player na **true**, da li *moving_speed* duplira.
+    - void **testIfJumpingIsSetToTrueWhenThePlayerStartsJumping**()
+      - Testira da li kad se pozove metod *jumping()* klase Player, atribut *jumping* postane **true**.
+    
+- Testovi koji su bili napisani za klasu **Enemy**: 
+    
+    - void **testIfWhenEnemyMovesToTheRightItsXValueIsGreater** ()
+      - Testira da li kad se proizvoljna instanca klase Enemy pomeri u desnom smeru, povećava mu se *x* kordinata. 
+    - void **testIfWhenEnemyMovesToTheLeftItsXValueIsLesser**()
+      - Testira da li kad se proizvoljna instanca klase Enemy pomeri u levom smeru, smanjuje mu se *x* kordinata. 
+    - void **testIfWhenEnemySpawnsHeIsFallingAndHisYIsGreaterThanBefore** ()
+      - Testira da li dok proizvolja instanca klase Enemy pada, da mu se povećava *y* kordinata.
+    - void **testIfWhenEnemyJumpsHisYIsLesserThanBefore**()
+      - Testira da li dok proizvolja instanca klase Enemy skače, da mu se smanjuje *y* kordinata.
+
+- Bitno je napomenuti da je bilo potrebno refaktorisanje originalnog koda na par mesta, da bi bilo moguće napisati ove *unit testove*. Kao npr:
+  - Pomeriti *enum game_state* da bude globalan.
+  - Dodati *getter* i *setter* za atribut *cur_state* u klasi Game:
+    ```
+    void Game::setCur_state(const game_state &value)
+    {
+      cur_state = value;
+    }
+    
+    game_state Game::getCur_state() const
+    {
+      return cur_state;
+    }
+    ```
+  - Dodati su *getteri* za atribute *dying* i *moving_speed* u klasi Entity:
+    ```
+    bool Entity::getDying() const
+    {
+      return dying;
+    }
+
+    int Entity::getMoving_speed() const
+    {
+      return moving_speed;
+    }
+    ```
+  - Dodati *getteri* i *setteri* u klasi Entity za atribute *jumping* i *falling*:
+    ```
+    bool Entity::getJumping() const
+    {
+      return jumping;
+    }
+    
+    void Entity::setJumping(bool value)
+    {
+      jumping = value;
+    }
+    
+    bool Entity::getFalling() const
+    {
+      return falling;
+    }
+
+    void Entity::setFalling(bool value)
+    {
+      falling = value;
+    }
+    ```
+- Kada pokrenemo projekat, možemo da vidimo da su svi napisati testovi uspešno prošli!
+
+  ![image](./pictures/testing_results.png)
+
+- **Zaključak**: Kod je kvalitetno napisan, čim svi testovi prolaze!
+
+## 
+
 
 
 
