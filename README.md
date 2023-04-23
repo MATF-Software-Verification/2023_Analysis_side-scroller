@@ -9,3 +9,15 @@ Primena alata biće izvršena nad main granom, i commit-om čiji je heš: 97026c
 ## Opis projekta
 Projekat *Side Scroller* predstavlja igricu 2D karaktera, inspirisana igrama poput Super Mario i Megaman, gde igrač treba da dođe do kraja nivo-a, i da spasi princezu.
 
+## Korišćeni alati:
+```
+- Valgrind - memcheck
+- Valgrind - massif
+- QTest (Unit testovi)
+- GCov
+- Clang statički analizator
+```
+
+## Zaključak:
+- Pored sitnih propusta, i grešaka sa curenjem memorije, projekat se ponaša dobro.
+
