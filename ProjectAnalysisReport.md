@@ -414,6 +414,49 @@ QMAKE_LFLAGS += --coverage
 
 - **Zaključak**: Sa unit testovima koji su napisani nismo postigli ciljanu pokrivenost koda, ali, podigli smo je na vrlo visok nivo. Daljom nadogradnjom, i pisanjem još testova, pokrivenost će se podići! 
 
+## Clang statička analiza (scan-build)
+
+- scan-build je alat koji omogućava pokretanje statičkog analizatora nad izvornim kodom, i koji je korišćen da bi se uradila statička analiza projekta *SideScroller*.
+
+- Pri pozivanju **qmake-a**, korišćena je komanda: 
+
+  ```
+  scan-build --use-c++=g++ qmake ../side-scroller/side-scroller.pro
+  ```
+
+- Dok je pri kompajliranju korišćena komanda: 
+  ```
+  scan-build --use-c++=g++ make
+  ```
+  Bitno je napomenuti da je dodata opcija *-g*, tj. da je kod kompajliran u debug mode-u.
+
+- Bilo je potrebno više vremena nego uobičajno da bi se izgradio projekat (oko 6-7 minuta). Na kraju analize, data nam je komanda koju treba pustiti sledeću, da bismo videli izveštaj:
+  ```
+  scan-view /tmp/scan-build-2023-04-23-175726-8268-1
+  ```
+
+- Pokretanjem prethodne komande, dobijamo sledeći izveštaj:
+![image](./pictures/clang_1.png)
+Kao što se može videti, izveštaj nam javlja jednu grešku u projektu. Naime, u klasi *LevelManager*, u **180** liniji, dešava se *curenje memorije*. 
+Otvaranjem koda na zadatom mestu, vidimo sledeće:
+![image](./pictures/clang_2.png)
+![image](./pictures/clang_3.png)
+Kao što vidimo, greška je nastala jer je alocirana memorija za objekat klase *Babe*, ali izgubljena je referenca, i nije oslobođen taj memorijski prostor. Sledećim kratkim izmenama klase *LevelManager*, ispravljamo ovaj problem. Najpre postavimo da *LevelManager* čuva referencu na alociranu memoriju:
+
+  ```
+  this->princess = new Babe();
+  ```
+  Pored toga, kreiramo destruktor za klasu u pitanju, da bi se oslobodila ta memorija:
+  ```
+  LevelManager::~LevelManager()
+  {
+    delete princess;
+  }
+  ```
+  I time rešavamo zadati problem.
+- **Zaključak**: Statičkom analizom koda nije pronađeno puno grešaka u projektu, i one koje su nađene su popravljene.
+
+
 
 
 
