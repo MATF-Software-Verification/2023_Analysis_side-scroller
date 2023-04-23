@@ -326,7 +326,7 @@ Number of snapshots: 63
     {
       cur_state = value;
     }
-    
+
     game_state Game::getCur_state() const
     {
       return cur_state;
@@ -370,7 +370,7 @@ Number of snapshots: 63
 
   ![image](./pictures/testing_results.png)
 
-- **Zaključak**: Kod je kvalitetno napisan, čim svi testovi prolaze!
+- **Zaključak**: Kod za koji su napisani testovi je dobrog kvaliteta!
 
 ## 
 
