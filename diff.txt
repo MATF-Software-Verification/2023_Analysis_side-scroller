@@ -1,0 +1,347 @@
+diff --git a/.gitignore b/.gitignore
+index e1c87f4..b4df66d 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -1 +1,3 @@
+-build-side-scroller-Desktop-Debug/
+\ No newline at end of file
++build-side-scroller-Desktop-Debug/
++build
++build-*
+\ No newline at end of file
+diff --git a/side-scroller/Button.cpp b/side-scroller/Button.cpp
+index d2f4216..9025c42 100644
+--- a/side-scroller/Button.cpp
++++ b/side-scroller/Button.cpp
+@@ -39,5 +39,12 @@ void Button::hoverEnterEvent(QGraphicsSceneHoverEvent *event) {
+ }
+ 
+ void Button::hoverLeaveEvent(QGraphicsSceneHoverEvent *event) {
+-  setPixmap(texture[0]);
++    setPixmap(texture[0]);
++}
++
++
++
++Button::~Button()
++{
++    delete text;
+ }
+diff --git a/side-scroller/Button.h b/side-scroller/Button.h
+index b3304d6..db6addf 100644
+--- a/side-scroller/Button.h
++++ b/side-scroller/Button.h
+@@ -15,6 +15,7 @@ public:
+     void mousePressEvent(QGraphicsSceneMouseEvent *event);
+     void hoverEnterEvent(QGraphicsSceneHoverEvent *event);
+     void hoverLeaveEvent(QGraphicsSceneHoverEvent *event);
++    ~Button();
+ signals:
+     void clicked();
+ private:
+diff --git a/side-scroller/Entity.cpp b/side-scroller/Entity.cpp
+index 65f32eb..a4850f5 100644
+--- a/side-scroller/Entity.cpp
++++ b/side-scroller/Entity.cpp
+@@ -39,9 +39,39 @@ Entity::Entity() : Object() {
+   walkable_object = 0;
+ }
+ 
++bool Entity::getDying() const
++{
++    return dying;
++}
++
++int Entity::getMoving_speed() const
++{
++    return moving_speed;
++}
++
++bool Entity::getJumping() const
++{
++    return jumping;
++}
++
++bool Entity::getFalling() const
++{
++    return falling;
++}
++
++void Entity::setFalling(bool value)
++{
++    falling = value;
++}
++
++void Entity::setJumping(bool value)
++{
++    jumping = value;
++}
++
+ void Entity::startJumping() {
+-  if (!falling && !jumping) {
+-    //        QSound::play(":/audio/Sounds/MegamanLand.wav");
++    if (!falling && !jumping) {
++        //        QSound::play(":/audio/Sounds/MegamanLand.wav");
+     walkable_object = 0;
+     jumping = true;
+   }
+diff --git a/side-scroller/Entity.h b/side-scroller/Entity.h
+index b54dd8b..f1215ee 100644
+--- a/side-scroller/Entity.h
++++ b/side-scroller/Entity.h
+@@ -64,6 +64,12 @@ class Entity : public Object
+         virtual void die();
+         virtual void solveCollisions();
+         virtual void freeze(){ freezed = true;}
++        bool getDying() const;
++        int getMoving_speed() const;
++        bool getJumping() const;
++        bool getFalling() const;
++        void setFalling(bool value);
++        void setJumping(bool value);
+ };
+ 
+ #endif // ENTITY_H
+diff --git a/side-scroller/Game.cpp b/side-scroller/Game.cpp
+index 63f8aee..b45c8e7 100644
+--- a/side-scroller/Game.cpp
++++ b/side-scroller/Game.cpp
+@@ -27,6 +27,20 @@ Game *Game::instance() {
+   return uniqueInstance;
+ }
+ 
++Game::~Game()
++{
++
++    delete health_bar;
++    delete player;
++    delete pause_screen;
++    delete death_screen;
++    delete level_manager;
++
++    scene->clear();
++    delete scene;
++
++}
++
+ 
+ Game::Game(QGraphicsView *parent) : QGraphicsView(parent) {
+   // setup scene/view
+@@ -37,6 +51,8 @@ Game::Game(QGraphicsView *parent) : QGraphicsView(parent) {
+   setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+   scene->setSceneRect(0, 0, 10000, 5608);
+ 
++  level_manager = new LevelManager();
++
+   // setup game engine
+   QObject::connect(&engine, SIGNAL(timeout()), this, SLOT(advance()));
+   engine.setInterval(10);
+@@ -62,9 +78,19 @@ Game::Game(QGraphicsView *parent) : QGraphicsView(parent) {
+   death_screen = new QGraphicsPixmapItem();
+ }
+ 
++void Game::setCur_state(const game_state &value)
++{
++    cur_state = value;
++}
++
++game_state Game::getCur_state() const
++{
++    return cur_state;
++}
++
+ void Game::displayOptions() {
+-  scene->clear();
+-  scene->setBackgroundBrush(QBrush(QImage(":/images/Textures/options.png")));
++    scene->clear();
++    scene->setBackgroundBrush(QBrush(QImage(":/images/Textures/options.png")));
+ 
+ 
+   back_button = new Button("back", 10, 530);
+@@ -148,7 +174,7 @@ void Game::start() {
+     scene->clear();
+     engine.start();
+     std::string level_name = "World-1-1";
+-    player = LevelManager::load(&level_name, scene);
++    player = level_manager->load(&level_name, scene);
+     //        QSound::play(":/audio/Sounds/GameStart.wav");
+ 
+     //        main_menu_music->stop();
+diff --git a/side-scroller/Game.h b/side-scroller/Game.h
+index 692937d..3bd19d9 100644
+--- a/side-scroller/Game.h
++++ b/side-scroller/Game.h
+@@ -14,17 +14,19 @@
+ #include "HealthBar.h"
+ #include "Button.h"
+ 
++enum game_state{READY, RUNNING, PAUSE, GAME_OVER};
++
+ class Game : public QGraphicsView
+ {
+     Q_OBJECT
+ 
+-    enum game_state{READY, RUNNING, PAUSE, GAME_OVER};
+-
+     private:
+ 
+         static Game* uniqueInstance;
+         Game(QGraphicsView *parent=0);
+ 
++        LevelManager* level_manager;
++
+         QGraphicsScene *scene;
+         HealthBar* health_bar;
+         Player *player;
+@@ -47,7 +49,7 @@ class Game : public QGraphicsView
+         bool screen_used = false;
+ 
+ 
+-    protected:
++    public:
+ 
+         virtual void keyPressEvent(QKeyEvent *e);
+         virtual void keyReleaseEvent(QKeyEvent *e);
+@@ -59,11 +61,16 @@ class Game : public QGraphicsView
+ 
+         QGraphicsScene* getScene(){return scene;}
+         Player* getPlayer(){return player;}
++        ~Game();
++
++
+ 
+ 
++        game_state getCur_state() const;
+ 
++        void setCur_state(const game_state &value);
+ 
+-    public slots:
++public slots:
+ 
+ 
+         void advance();
+diff --git a/side-scroller/LevelManager.cpp b/side-scroller/LevelManager.cpp
+index 3c718de..e0b3d74 100644
+--- a/side-scroller/LevelManager.cpp
++++ b/side-scroller/LevelManager.cpp
+@@ -51,7 +51,7 @@ Player *LevelManager::load(std::string* level_name, QGraphicsScene *scene) {
+     QList<Block *> blocks;
+     QList<Enemy *> enemies;
+ 
+-    Babe *princess = new Babe();
++    this->princess = new Babe();
+ 
+ 
+     while (!in.atEnd()) {
+@@ -184,3 +184,8 @@ Player *LevelManager::load(std::string* level_name, QGraphicsScene *scene) {
+ 
+   return player;
+ }
++
++LevelManager::~LevelManager()
++{
++    delete princess;
++}
+diff --git a/side-scroller/LevelManager.h b/side-scroller/LevelManager.h
+index c468088..694613f 100644
+--- a/side-scroller/LevelManager.h
++++ b/side-scroller/LevelManager.h
+@@ -4,12 +4,17 @@
+ #include <QGraphicsScene>
+ #include <string>
+ 
++#include "Babe.h"
+ #include "Player.h"
+ 
+ class LevelManager
+ {
+     public:
+-        static Player* load(std::string* level_name, QGraphicsScene * scene);
++        Player* load(std::string* level_name, QGraphicsScene * scene);
++        ~LevelManager();
++
++    private:
++        Babe* princess;
+ 
+ };
+ 
+diff --git a/side-scroller/Object.h b/side-scroller/Object.h
+index ddfb5ad..1b083b0 100644
+--- a/side-scroller/Object.h
++++ b/side-scroller/Object.h
+@@ -3,6 +3,7 @@
+ 
+ #include <QGraphicsRectItem>
+ 
++
+ #include "Utils.h"
+ 
+ class Object : public QGraphicsPixmapItem
+diff --git a/side-scroller/main.cpp b/side-scroller/main.cpp
+index fe2414a..e680384 100644
+--- a/side-scroller/main.cpp
++++ b/side-scroller/main.cpp
+@@ -2,9 +2,45 @@
+ #include <QApplication>
+ 
+ int main(int argc, char *argv[]) {
+-  QApplication app(argc, argv);
++    QApplication app(argc, argv);
++    Game::instance()->show();
++    return app.exec();
+ 
+-  Game::instance()->show();
++//    Game* g = Game::instance();
+ 
+-  return app.exec();
++//    g->start();
++
++//    for (int i = 0; i < 10; ++i) {
++//        g->advance();
++//    }
++
++//    g->gameover();
++
++//    delete g;
++
++//    app.exit(0);
++//    return 0;
++
++}
++
++
++int customMain(int argc, char* argv[]) {
++    QApplication app(argc, argv);
++//  Game::instance()->show();
++//  return app.exec();
++
++    Game* g = Game::instance();
++
++    g->start();
++
++    for (int i = 0; i < 10; ++i) {
++        g->advance();
++    }
++
++    g->gameover();
++
++    delete g;
++
++    app.exit(0);
++    return 0;
+ }
+diff --git a/side-scroller/side-scroller.pro b/side-scroller/side-scroller.pro
+index 907b55d..1d6f8dc 100644
+--- a/side-scroller/side-scroller.pro
++++ b/side-scroller/side-scroller.pro
+@@ -10,6 +10,10 @@ CONFIG += c++11
+ # deprecated API in order to know how to port your code away from it.
+ DEFINES += QT_DEPRECATED_WARNINGS
+ 
++QMAKE_CXXFLAGS += --coverage
++QMAKE_LFLAGS += --coverage
++
++
+ # You can also make your code fail to compile if it uses deprecated APIs.
+ # In order to do so, uncomment the following line.
+ # You can also select to disable deprecated APIs only up to a certain version of Qt.
