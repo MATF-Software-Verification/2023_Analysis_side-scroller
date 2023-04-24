@@ -101,7 +101,7 @@
 ==12013==    by 0x11AE16: Game::instance() (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
 ==12013==    by 0x114FCE: main (in /home/user/Desktop/2023_Analysis_side-scroller/28-side-scroller/build/side-scroller)
 ```
-Dolazimo do zaključka da memorija zauzeta, nikada nije bila oslobođena, što je čudno, pošto je u mock-u main funkcije dodata linija koja bi trebala da oslobodi memoriju koju je zauzela Main klasa, što nas dovodi do zaključka da postoji problem sa *destruktorom* klase. Što i jeste bio problem. **Skoro nijedna od klasa u programu nije imala ispisan destrutor!** Detaljna analiza koda nas dovodi do zaključka da bi sledeći destrutori za klase *Main* i *Button* trebali da nam pomognu da se rešimo curanja memorije:
+Dolazimo do zaključka da memorija zauzeta, nikada nije bila oslobođena, što je čudno, pošto je u mock-u main funkcije dodata linija koja bi trebala da oslobodi memoriju koju je zauzela Main klasa, što nas dovodi do zaključka da postoji problem sa *destruktorom* klase, što i jeste bio problem. **Skoro nijedna od klasa u programu nije imala ispisan destrutor!** Detaljna analiza koda nas dovodi do zaključka da bi sledeći destrutori za klase *Main* i *Button* trebali da nam pomognu da se rešimo curanja memorije:
 ```
 Game::~Game()
 {   
@@ -138,7 +138,7 @@ Button::~Button()
     valgrind --tool=massif ../../28-side-scroller/build/side-scroller
     ```
 
-- Time dobijamo fajl *massif.out.14753*, samo što čitanje ovog fajla nije lako čitljivo čoveku, zato koristimo dodatnu komandu, da bi napravio nama čitljiviji fajl:
+- Time dobijamo fajl *massif.out.14753*, samo što čitanje ovog fajla nije lako za čoveka, zato koristimo dodatnu komandu, da bi napravio nama čitljiviji fajl:
 
     ```
     ms_print massif.out.14753 > massif_graph.txt
@@ -193,7 +193,7 @@ Number of snapshots: 89
   7     63,585,081          850,928          696,274       154,654            0
 ```
 
-- Iz izveštaja možemo da vidimo da je massif napravio 89 preseka, i izvojio nam je neke od njih. Vrhunac je dostignut u 55, kada je potrošnja hipa bila oko 224.2MB, ali, treba napomenuti da kada se popne do te potrošnje, retko pada. Predpostavka je da program troši toliko veliku količinu hipa, pošto cela mapa je sastavljena od objekata različitih vrsta, pri čemu je svaki objekat predstavljen slikom. Samim tim, mnogo će više hipa trošiti, nego standardni program.
+- Iz izveštaja možemo da vidimo da je massif napravio 89 preseka, i izvojio nam je neke od njih. Vrhunac je dostignut u 55, kada je potrošnja hipa bila oko 224.2MB, ali, treba napomenuti da kada se popne do te potrošnje, retko pada. Predpostavka je da program troši toliko veliku količinu hipa, pošto cela mapa je sastavljena od objekata različitih vrsta, pri čemu je svaki objekat predstavljen slikom. Samim tim, mnogo će više memorije trošiti, nego standardni program.
 
 - Ponovo je vršena ista analiza programa, samo što sada pratimo i potrošnju steka. Pozivamo istu komandu, samo što dodajemo opciju *--stack=yes*:
 
@@ -410,7 +410,7 @@ QMAKE_LFLAGS += --coverage
   Ako uđemo u pokrivenost samo side-scrollera, vidimo sledeće:
   ![image](./pictures/lcov_2.png)
 
-  Dati prikaz se poklapa sa unit testovima koje smo pisali. Naime, ako pogledamo pokrivenost testovima klasu *Rocket*, vidimo da ona uopšte nije testirana, što i ima smisla, pošto nismo pisali testove za zadatu klasu, i testovi koji su bili napisani, nisu imali veze sa tom klasom. Dok npr. klasa *EnemySniperJoe* ima pokrivenost koda od **91.7%** i pokrivenost funkcija **100%**, zato što dok smo pisali testove za *Enemy* klasu, instancirali smo tu objekat te klase. Klasa za koju smo najviše pisali testove, *Game*, ima relativno malu pokrivenost, **69.4%** pokrivenost koda, i **60%** prekrivenost funkcija, ali, treba uzeti u obzira da je klasa Game najveća klasa celog projekta, i da bi zahtevala veliki broj testova da bi se pokrila do kraja. 
+  Dati prikaz se poklapa sa unit testovima koje smo pisali. Naime, ako pogledamo pokrivenost testovima klasu *Rocket*, vidimo da ona uopšte nije testirana, što i ima smisla, pošto nismo pisali testove za zadatu klasu, i testovi koji su bili napisani, nisu imali veze sa tom klasom. Dok npr. klasa *EnemySniperJoe* ima pokrivenost koda od **91.7%** i pokrivenost funkcija **100%**, zato što dok smo pisali testove za *Enemy* klasu, instancirali smo objekat te klase. Klasa za koju smo najviše pisali testove, *Game*, ima relativno malu pokrivenost, **69.4%** pokrivenost koda, i **60%** prekrivenost funkcija, ali, treba uzeti u obzira da je klasa Game najveća klasa celog projekta, i da bi zahtevala veliki broj testova da bi se pokrila do kraja. 
 
 - **Zaključak**: Sa unit testovima koji su napisani nismo postigli ciljanu pokrivenost koda, ali, podigli smo je na vrlo visok nivo. Daljom nadogradnjom, i pisanjem još testova, pokrivenost će se podići! 
 
